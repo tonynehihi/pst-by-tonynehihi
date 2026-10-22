@@ -1,6 +1,6 @@
 # Photoshop by Tonynehihi — Hướng dẫn cài đặt & sử dụng
 
-Bản build cá nhân của Tony, dựa trên PhotoCraft v0.8.2 (MIT/Apache-2.0) — bản clone Photoshop bằng Rust, chạy offline, không cần Adobe.
+Bản build cá nhân của Tony, dựa trên PhotoCraft v0.12.0 (MIT/Apache-2.0) — bản clone Photoshop bằng Rust, chạy offline, không cần Adobe.
 
 Đã rebrand:
 - Tên app **"Photoshop by Tonynehihi"**, icon **PsT** phong cách Adobe (nền xanh dương)
@@ -8,13 +8,12 @@ Bản build cá nhân của Tony, dựa trên PhotoCraft v0.8.2 (MIT/Apache-2.0)
 - About dialog gọn: "Photoshop by Tonynehihi — by Tonynehihi" + version
 - Đã gỡ hết link Discord / website / GitHub của upstream khỏi menu Help
 
-## Có gì mới ở bản 1.1.0
+## Có gì mới ở bản 1.2.0
 
-- **Tên Spotlight rút gọn còn "PsT"**: trong Finder/Spotlight/Dock app tên là **PsT** (giống LrT); trong app vẫn ghi đầy đủ "Photoshop by Tonynehihi". Settings giữ nguyên, không mất gì.
-- **Tự cập nhật như Lightroom by Tony**: mở app là tự kiểm tra bản mới trên GitHub (repo `tonynehihi/pst-by-tonynehihi`), có bản mới thì hiện pop-up kèm changelog; bấm Download → app tự build bản mới ngay trong app (có tiến trình) → Finish Install là xong. Kiểm tra tay: Help → Check for Updates, hoặc trong About.
-- **Icon PsT vẽ lại theo đúng nhận diện Adobe** (nền #001E36, chữ #31A8FF).
+- **Đồng bộ PhotoCraft v0.12.0**: 41 smart filters mới (Hue/Saturation, Perspective Warp, Filter Gallery, Camera Raw...), xuất texture DDS (BC1–BC3 + mipmaps), lưu PSD Indexed giữ transparency + ICC, preview camera raw chạy nền không đơ giao diện, dialog Open/Save lọc theo từng format, thêm tuỳ chọn "Show File Name In Title".
+- **Gỡ sạch link cộng đồng upstream khỏi UI**: nút Discord, hàng link ở start screen, About/links — menu Help giờ chỉ còn đúng About / Check for Updates / System Info / Keyboard Shortcuts.
 
-**Lưu ý: bản 1.1.0 phải cài TAY một lần** (app cũ chưa có tính năng tự cập nhật): build như hướng dẫn dưới đây, xóa "Photoshop by Tony.app" cũ trong Applications, kéo **PsT.app** vào. Từ 1.1.1 trở đi app tự cập nhật.
+**Lưu ý:** đang dùng bản 1.1.0 thì khỏi build lại — mở app, Help → Check for Updates là tự lên 1.2.0. Hướng dẫn build dưới đây chỉ dành cho cài mới từ source.
 
 ## Gỡ bản cũ / cài lại sạch
 
@@ -50,7 +49,7 @@ Xong thì **đóng Terminal, mở lại**.
 
 ## Build & chạy
 
-**Bước 3** — Giải nén `pst-by-tonynehihi-1.1.0.zip`.
+**Bước 3** — Giải nén `pst-by-tonynehihi-1.2.0.zip`.
 
 **Bước 4** — Trong Terminal:
 ```bash
