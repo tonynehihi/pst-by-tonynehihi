@@ -9,8 +9,12 @@
 # Clean-room: every entry was written from the plain meaning of the English label using ordinary
 # Italian computing vocabulary (livello, pennello, selezione, quadro ...). No proprietary localisation
 # resource, string table or product UI was consulted or copied; add entries the same way.
-# Product and technology names (Photoshop by Tonynehihi, ArtCraft, OpenType, CMYK, Lab ...) stay in Latin
+# Product and technology names (PhotoCraft, ArtCraft, OpenType, CMYK, Lab ...) stay in Latin
 # letters; the trailing … of dialog commands is kept.
+
+# Layer Mask Display Options (the layer mask rubylith's colour and opacity)
+	Mask Options…	Opzioni maschera…
+	Layer Mask Display Options…	Opzioni di visualizzazione maschera di livello…
 
 # Channel Options and New Spot Channel (#3761)
 	Channel Color	Colore canale
@@ -327,6 +331,7 @@
 	Blending Options…	Opzioni di fusione…
 	Bevel & Emboss…	Smusso e rilievo…
 	Use Global Light	Usa luce globale
+	Overprint	Sovrastampa
 	Inner Shadow…	Ombra interna…
 	Inner Glow…	Bagliore interno…
 	Satin…	Raso…
@@ -790,6 +795,9 @@
 	About Photoshop by Tonynehihi	Informazioni su Photoshop by Tonynehihi
 	Photoshop by Tonynehihi Website	Sito web Photoshop by Tonynehihi
 	Photoshop by Tonynehihi on GitHub	Photoshop by Tonynehihi su GitHub
+	About PhotoCraft	Informazioni su PhotoCraft
+	PhotoCraft Website	Sito web PhotoCraft
+	PhotoCraft on GitHub	PhotoCraft su GitHub
 	ArtCraft Website	Sito web ArtCraft
 	Join the ArtCraft Discord…	Unisciti al Discord di ArtCraft…
 	Report an Issue…	Segnala un problema…
@@ -845,6 +853,7 @@
 	All Slices	Tutte le sezioni
 	All User Slices	Tutte le sezioni utente
 	All shortcuts reset to Photoshop by Tonynehihi defaults.	Tutte le scorciatoie ripristinate ai predefiniti di Photoshop by Tonynehihi.
+	All shortcuts reset to PhotoCraft defaults.	Tutte le scorciatoie ripristinate ai predefiniti di PhotoCraft.
 	Alt	Alt
 	Always use pressure for opacity	Usa sempre pressione per opacità
 	Always use pressure for size	Usa sempre pressione per dimensione
@@ -1089,7 +1098,7 @@
 	Done	Fatto
 	Dots	Punti
 	Drag a rectangle around the object	Trascina un rettangolo attorno all'oggetto
-	Drag on the image to add a constraint; Shift for horizontal/vertical; right-click to delete.	Trascina sull'immagine per aggiungere un vincolo; Maiusc per orizz/vert; clic destro per eliminare.
+	Drag on the image to add a constraint; Shift for horizontal/vertical; right-click a constraint to change or delete it.	Trascina sull'immagine per aggiungere un vincolo; Maiusc per orizz/vert; clic destro su un vincolo per modificarlo o eliminarlo.
 	Drag to move the active shape's path or the Work Path	Trascina per spostare il tracciato forma attiva o il Tracciato di lavoro
 	Click: select anchor · Drag: move anchor, handle or segment · {shift}-click: add · {alt}-click: whole subpath	Clic: seleziona punto · Trascina: sposta punto, maniglia o segmento · {shift}-clic: aggiungi · {alt}-clic: intero sottotracciato
 	Draw with the Pen tool (P) or make a work path from a selection.	Disegna con Penna (P) o crea un tracciato di lavoro da una selezione.
@@ -1098,6 +1107,8 @@
 	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or copy the image in your file manager and paste it with {paste}.	Il drag-and-drop nativo non è ancora supportato su Wayland. Usa File › Apri, oppure copia l'immagine nel file manager e incollala con {paste}.
 	To drop files, start Photoshop by Tonynehihi under XWayland: `{command}`	Per trascinare file, avvia Photoshop by Tonynehihi sotto XWayland: `{command}`
 	Or set Preferences › Performance › Linux display server to X11: Photoshop by Tonynehihi then always starts under XWayland.	Oppure imposta Preferenze › Prestazioni › Server grafico Linux su X11: Photoshop by Tonynehihi partirà sempre sotto XWayland.
+	To drop files, start PhotoCraft under XWayland: `{command}`	Per trascinare file, avvia PhotoCraft sotto XWayland: `{command}`
+	Or set Preferences › Performance › Linux display server to X11: PhotoCraft then always starts under XWayland.	Oppure imposta Preferenze › Prestazioni › Server grafico Linux su X11: PhotoCraft partirà sempre sotto XWayland.
 	Edit › Paste	Modifica › Incolla
 	Duplicate Layers…	Duplica livelli…
 	Duplicate style	Duplica stile
@@ -1331,6 +1342,8 @@
 	Override Pressure	Sovrascrivi pressione
 	Override Rotation	Sovrascrivi rotazione
 	Override Tilt	Sovrascrivi inclinazione
+	Override Tilt X	Sovrascrivi inclinazione X
+	Override Tilt Y	Sovrascrivi inclinazione Y
 	PRESET DETAILS	DETTAGLI PREDEFINITO
 	PSD	PSD
 	Paint Overlay	Sovrapposizione pittura
@@ -1348,6 +1361,9 @@
 	Photoshop by Tonynehihi	Photoshop by Tonynehihi
 	Photoshop by Tonynehihi Manages Colors	Photoshop by Tonynehihi gestisce i colori
 	Photoshop by Tonynehihi — an open-source, native image editor written in Rust.	Photoshop by Tonynehihi — editor immagini nativo open-source scritto in Rust.
+	PhotoCraft	PhotoCraft
+	PhotoCraft Manages Colors	PhotoCraft gestisce i colori
+	PhotoCraft — an open-source, native image editor written in Rust.	PhotoCraft — editor immagini nativo open-source scritto in Rust.
 	Pin Depth:	Profondità pin:
 	Pixel Length:	Lunghezza pixel:
 	Pixels/Centimeter	Pixel/Centimetro
@@ -1424,10 +1440,12 @@
 	Load a keyboard shortcut set saved as .kys	Carica un set di scorciatoie da tastiera salvato come .kys
 	Imported {n} shortcuts from {file}. Click OK to keep them.	Importate {n} scorciatoie da {file}. Fai clic su OK per conservarle.
 	{n} commands are not in Photoshop by Tonynehihi.	{n} comandi non esistono in Photoshop by Tonynehihi.
+	{n} commands are not in PhotoCraft.	{n} comandi non esistono in PhotoCraft.
 	Keyboard shortcuts imported	Scorciatoie da tastiera importate
 	Your keyboard shortcut set {set} is in use here: {n} shortcuts differ from the defaults. Edit › Keyboard Shortcuts shows them; Reset All to Defaults undoes this.	Il tuo set di scorciatoie da tastiera {set} è in uso qui: {n} scorciatoie differiscono dai predefiniti. Modifica › Scorciatoie da tastiera le mostra; Ripristina tutto ai predefiniti annulla l'importazione.
 	Import keyboard shortcuts?	Importare le scorciatoie da tastiera?
 	Photoshop by Tonynehihi found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Photoshop by Tonynehihi's. Import it?	Photoshop by Tonynehihi ha trovato su questo computer il tuo set di scorciatoie da tastiera {set} di un altro editor di immagini: {n} delle sue scorciatoie differiscono da quelle di Photoshop by Tonynehihi. Importarlo?
+	PhotoCraft found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from PhotoCraft's. Import it?	PhotoCraft ha trovato su questo computer il tuo set di scorciatoie da tastiera {set} di un altro editor di immagini: {n} delle sue scorciatoie differiscono da quelle di PhotoCraft. Importarlo?
 	Edit › Keyboard Shortcuts › Reset All to Defaults undoes an import.	Modifica › Scorciatoie da tastiera › Ripristina tutto ai predefiniti annulla un'importazione.
 	Don't Import	Non importare
 	The keyboard shortcut set was not imported: {error}	Il set di scorciatoie da tastiera non è stato importato: {error}
@@ -1483,6 +1501,7 @@
 	Set shape fill type	Imposta tipo riempimento forma
 	Set shape stroke type	Imposta tipo traccia forma
 	Set the text color	Imposta colore testo
+	Create warped text	Crea testo deformato
 	Shadows	Ombre
 	Shape:	Forma:
 	Sharpening	Contrasto
@@ -1654,6 +1673,7 @@
 	Custom Shape Tool	Strumento Forma personale
 	Cyans	Ciano
 	Default Photoshop by Tonynehihi Size	Dimensione predefinita Photoshop by Tonynehihi
+	Default PhotoCraft Size	Dimensione predefinita PhotoCraft
 	Delete Workspace	Elimina area di lavoro
 	Diamond	Diamante
 	Dimensions:	Dimensioni:
@@ -1765,6 +1785,7 @@
 	Convert Point Tool	Strumento Converti punto
 	Photo	Foto
 	Photoshop by Tonynehihi website	Sito web Photoshop by Tonynehihi
+	PhotoCraft website	Sito web PhotoCraft
 	Picas	Pica
 	Pillow Emboss	Rilievo cuscino
 	Pixel Replacement	Sostituzione pixel
@@ -1989,6 +2010,7 @@
 	Quick export format	Formato esportazione rapida
 	Quick export location	Posizione esportazione rapida
 	Recent file count	Conteggio file recenti
+	LUT folder	Cartella LUT
 	Recent files	File recenti
 	Recent fonts	Font recenti
 	Recover on launch	Recupera all'avvio
@@ -1998,7 +2020,7 @@
 	Same folder	Stessa cartella
 	Save in background	Salva in background
 	Scratch Disks	Dischi virtuali
-	Screen	Schermo
+	Screen	Scherma
 	Screen resolution	Risoluzione schermo
 	Scrubby slider acceleration	Accelerazione slider scrubby
 	Sessions only	Solo sessioni
@@ -2105,6 +2127,7 @@
 	More panels	Altri pannelli
 	More documents	Altri documenti
 	These settings aren't available in Photoshop by Tonynehihi yet.	Queste impostazioni non sono ancora disponibili in Photoshop by Tonynehihi.
+	These settings aren't available in PhotoCraft yet.	Queste impostazioni non sono ancora disponibili in PhotoCraft.
 	Graphics	Grafica
 	Reset GPU Backend	Reimposta backend GPU
 	Applies at next launch.	Si applica al prossimo avvio.
@@ -2323,7 +2346,10 @@
 	Switched to CPU rendering	Passato a rendering CPU
 	GPU acceleration could not continue. Your documents are unchanged.	Accelerazione GPU non ha potuto continuare. I documenti sono invariati.
 	Photoshop by Tonynehihi is using the CPU image compositor. The window may still use your graphics adapter.	Photoshop by Tonynehihi sta componendo immagini su CPU. La finestra può ancora usare adattatore grafico.
+	PhotoCraft is using the CPU image compositor. The window may still use your graphics adapter.	PhotoCraft sta componendo immagini su CPU. La finestra può ancora usare adattatore grafico.
 	Retry GPU requires a restart. Save your work first.	Riprovare GPU richiede riavvio. Salva prima il lavoro.
+	Retry GPU tries the graphics processor again now.	Riprova GPU riprova subito il processore grafico.
+	GPU acceleration resumed.	Accelerazione GPU ripresa.
 	Keep Using CPU	Continua su CPU
 	Retry GPU	Riprova GPU
 	Advanced	Avanzato
@@ -2378,6 +2404,11 @@ cameraRaw	Amount	Quantità
 	Drag or click polygon points · hold Alt during lasso for straight segments · {add} add · {sub} before drawing subtracts	Trascina o fai clic sui punti del poligono · tieni premuto Alt durante il lazo per segmenti dritti · {add} aggiunge · {sub} prima di disegnare sottrae
 	TIFF Options	Opzioni TIFF
 	Targa Options	Opzioni Targa
+	JPEG Options	Opzioni JPEG
+	Image Options	Opzioni immagine
+	Format Options	Opzioni formato
+	Baseline ("Standard")	Linea di base ("Standard")
+	Baseline Optimized	Linea di base ottimizzata
 	24 bits/pixel	24 bit/pixel
 	32 bits/pixel	32 bit/pixel
 	Including layers will increase file size.	Includere i livelli aumenterà le dimensioni del file.
@@ -2563,6 +2594,7 @@ fontWeight	Italic	Corsivo
 	Transparency Threshold	Soglia di trasparenza
 	Opacity Threshold	Soglia di opacità
 	Photoshop by Tonynehihi — Screen Color Picker	Photoshop by Tonynehihi — Selettore colore schermo
+	PhotoCraft — Screen Color Picker	PhotoCraft — Selettore colore schermo
 
 	Rasterize svg groups deeper than	Rasterizza i gruppi SVG oltre questa profondità
 	0 turns this threshold off; SVG groups nested deeper than 100 levels are always rasterized.	0 disattiva questa soglia; i gruppi SVG annidati oltre 100 livelli vengono sempre rasterizzati.
@@ -2726,6 +2758,32 @@ cameraData	Lens	Obiettivo
 	Mirror	Rifletti
 	Output Settings	Impostazioni di output
 	Output To	Output in
+
+	Animation Options	Opzioni animazione
+	Entire Document	Documento intero
+	Filter Options	Opzioni filtro
+	Layer Bounds	Limiti livello
+	Layers Panel Options	Opzioni pannello Livelli
+	New Artboard…	Nuova tavola da disegno…
+	New Group…	Nuovo gruppo…
+	Prevent Auto-Nesting	Impedisci annidamento automatico
+	Show Layers	Mostra livelli
+	Thumbnail Contents	Contenuto miniature
+	Thumbnail Size	Dimensione miniature
+	Use Default Masks on Fill Layers	Usa maschere predefinite sui livelli di riempimento
+	Expand New Effects	Espandi nuovi effetti
+	Add “copy” to Copied Layers and Groups	Aggiungi «copia» ai livelli e ai gruppi duplicati
+	Preview on canvas when reordering layers	Anteprima sulla tela durante il riordino dei livelli
+	Show layer mask badges	Mostra distintivi delle maschere di livello
+
+# Smart Filter editors
+	Blending Options ({filter})	Opzioni di fusione ({filter})
+	Hide the layer's effects and Smart Filters  ({key}-click: all layers)	Nascondi effetti del livello e filtri avanzati  ({key}-clic: tutti i livelli)
+	Show the layer's effects and Smart Filters  ({key}-click: all layers)	Mostra effetti del livello e filtri avanzati  ({key}-clic: tutti i livelli)
+	Wait for the current job to finish.	Attendi il completamento dell'attività corrente.
+	The document or Smart Filter changed. Reopen its dialog.	Il documento o il filtro avanzato è cambiato. Riapri la sua finestra di dialogo.
+	Opacity must be between 0% and 100%.	L'opacità deve essere compresa tra 0% e 100%.
+	Dissolve is approximated: it blends without Photoshop's dither.	Dissolvi è approssimato: la fusione avviene senza il dither di Photoshop.
 	Loading fonts…	Caricamento font…
 	Response curve	Curva di risposta
 	Tool	Strumento
@@ -2952,6 +3010,7 @@ curves	Smooth	Leviga
 	Clipping Path	Tracciato di ritaglio
 	New Path	Nuovo tracciato
 	Duplicate Path	Duplica tracciato
+	Rename Path…	Rinomina tracciato…
 	Auto-Hide	Nascondi automaticamente
 	X	X
 	Y	Y
@@ -3006,6 +3065,8 @@ curves	Smooth	Leviga
 	Keywords	Parole chiave
 	Copyright Info URL	URL info copyright
 	Copyright Status	Stato copyright
+	Copyright Notice	Avviso sul copyright
+	Document Title	Titolo documento
 	Copyrighted	Protetto da copyright
 	Public Domain	Pubblico dominio
 	Unknown	Sconosciuto
@@ -3339,6 +3400,7 @@ layerLabel	No Color	Nessun colore
 	Restart	Riavvia
 	Quit	Esci
 	Quit Photoshop by Tonynehihi	Esci da Photoshop by Tonynehihi
+	Quit PhotoCraft	Esci da PhotoCraft
 	Close Window	Chiudi finestra
 	New Window	Nuova finestra
 	Open Image	Apri immagine
@@ -3843,6 +3905,7 @@ layerLabel	No Color	Nessun colore
 	Mosaic	Mosaico
 	Motion Blur	Movimento sfocato
 	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or run Photoshop by Tonynehihi under XWayland with `WAYLAND_DISPLAY= photocraft`.	Il drag-and-drop nativo dei file non è ancora supportato su Wayland. Usa File › Apri, oppure avvia Photoshop by Tonynehihi sotto XWayland con `WAYLAND_DISPLAY= photocraft`.
+	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or run PhotoCraft under XWayland with `WAYLAND_DISPLAY= photocraft`.	Il drag-and-drop nativo dei file non è ancora supportato su Wayland. Usa File › Apri, oppure avvia PhotoCraft sotto XWayland con `WAYLAND_DISPLAY= photocraft`.
 	Neon Glow	Bagliore neon
 	New Guide Layout	Nuovo layout guide
 	New Video Layer from File	Nuovo livello video da file
@@ -4024,8 +4087,10 @@ layerLabel	No Color	Nessun colore
 	{message} (notes: {n}; {warning})	{message} (note: {n}; {warning})
 	Preferences can't be saved	Impossibile salvare le preferenze
 	Photoshop by Tonynehihi keeps retrying; until a save succeeds, preference changes are lost when it closes.	Photoshop by Tonynehihi continua a riprovare; finché un salvataggio non riesce, le modifiche alle preferenze andranno perse alla chiusura.
+	PhotoCraft keeps retrying; until a save succeeds, preference changes are lost when it closes.	PhotoCraft continua a riprovare; finché un salvataggio non riesce, le modifiche alle preferenze andranno perse alla chiusura.
 	GPU retry scheduled	Nuovo tentativo GPU programmato
 	Save your work and restart Photoshop by Tonynehihi to retry GPU acceleration. CPU rendering remains active for this session.	Salva il lavoro e riavvia Photoshop by Tonynehihi per riprovare l'accelerazione GPU. Per questa sessione resta attivo il rendering su CPU.
+	Save your work and restart PhotoCraft to retry GPU acceleration. CPU rendering remains active for this session.	Salva il lavoro e riavvia PhotoCraft per riprovare l'accelerazione GPU. Per questa sessione resta attivo il rendering su CPU.
 	GPU device was lost; using the CPU renderer.	Dispositivo GPU perso; uso il rendering su CPU.
 	GPU error; using the CPU renderer.	Errore GPU; uso il rendering su CPU.
 	Couldn't open {name}: {error}	Impossibile aprire {name}: {error}
@@ -4101,9 +4166,16 @@ navigator	Zoom	Zoom
 	{shortcut} is already in use by {commands} and will be removed from it when you click OK.	{shortcut} è già usata da {commands} e verrà rimossa quando fai clic su OK.
 	Object Finder	Ricerca oggetti
 	No object found there — drag a rectangle around it	Nessun oggetto trovato lì: trascina un rettangolo intorno
+	The active layer has no pixels here — turn on Sample All Layers or select a layer with pixels	Il livello attivo non ha pixel qui: attiva Campiona tutti i livelli o seleziona un livello con pixel
 	Remove after each stroke	Rimuovi dopo ogni tratto
 	Apply the removal ({key})	Applica la rimozione ({key})
 	Strokes to remove: {n} (Enter applies, Esc cancels)	Tratti da rimuovere: {n} (Invio applica, Esc annulla)
+	Load Contours…	Carica profili…
+	Replace Contours…	Sostituisci profili…
+	Save Contours…	Salva profili…
+	Delete Contour	Elimina profilo
+	Loaded contours from {file}	Profili caricati da {file}
+	Saved contours to {file}	Profili salvati in {file}
 	Show home recent files	Mostra i file recenti nella schermata iniziale
 	Clear Brush Controls	Cancella controlli pennello
 	Reset All Locked Settings	Ripristina tutte le impostazioni bloccate
@@ -4112,10 +4184,14 @@ navigator	Zoom	Zoom
 # Actions panel: Load/Save Actions (.atn) and kept Photoshop steps
 	Load Actions…	Carica azioni…
 	Save Actions…	Salva azioni…
+	New Action…	Nuova azione…
+	Start Recording	Avvia registrazione
+	Stop Recording	Interrompi registrazione
 	{name} (Photoshop)	{name} (Photoshop)
 	{message} ({note})	{message} ({note})
 @plural	Loaded {n} action from {file}|Loaded {n} actions from {file}	Caricata {n} azione da {file}|Caricate {n} azioni da {file}
 @plural	{n} step has no Photoshop by Tonynehihi equivalent yet|{n} steps have no Photoshop by Tonynehihi equivalent yet	{n} passaggio non ha ancora un equivalente in Photoshop by Tonynehihi|{n} passaggi non hanno ancora un equivalente in Photoshop by Tonynehihi
+@plural	{n} step has no PhotoCraft equivalent yet|{n} steps have no PhotoCraft equivalent yet	{n} passaggio non ha ancora un equivalente in PhotoCraft|{n} passaggi non hanno ancora un equivalente in PhotoCraft
 @plural	Saved {n} action to {file}|Saved {n} actions to {file}	Salvata {n} azione in {file}|Salvate {n} azioni in {file}
 @plural	{n} step with no Photoshop equivalent left out|{n} steps with no Photoshop equivalent left out	Omesso {n} passaggio senza equivalente in Photoshop|Omessi {n} passaggi senza equivalente in Photoshop
 
@@ -4146,6 +4222,13 @@ navigator	Zoom	Zoom
 # History panel › History Brush source (#2966)
 	Paints from the History panel's source state	Dipinge dallo stato di origine del pannello Cronologia
 	Sets the source for the history brush	Imposta l'origine del pennello storia
+# Bevel & Emboss shading controls.
+	Highlight Mode	Metodo luci
+	Highlight Color	Colore luci
+	Highlight Opacity	Opacità luci
+	Shadow Mode	Metodo ombre
+	Shadow Color	Colore ombre
+	Shadow Opacity	Opacità ombre
 # Embedded Profile Mismatch: profile names beside the choices, Remember this choice
 	Use the embedded profile ({profile})	Usa profilo incorporato ({profile})
 	Convert to the working space ({profile})	Converti in spazio di lavoro ({profile})
@@ -4161,6 +4244,7 @@ navigator	Zoom	Zoom
 	Chisel Hard	Cesello duro
 	Chisel Soft	Cesello morbido
 	Open color-less EXR as ACEScg	Apri gli EXR senza spazio colore come ACEScg
+	Do not append "copy" to filename when saving a copy	Non aggiungere "copy" al nome del file quando si salva una copia
 
 # Color management, Liquify, glyph group, warp and Camera Raw labels the Serbian, Vietnamese and Japanese catalogs added
 	Adobe-rgb-compat	Adobe RGB (compatibile)
@@ -4263,6 +4347,11 @@ navigator	Zoom	Zoom
 	Increase Brush Size	Aumenta dimensione pennello
 	Decrease Brush Hardness	Riduci durezza pennello
 	Increase Brush Hardness	Aumenta durezza pennello
+	Previous Brush	Pennello precedente
+	Next Brush	Pennello successivo
+	First Brush	Primo pennello
+	Last Brush	Ultimo pennello
+	Preview size	Preview size
 	Space	Barra spaziatrice
 	Hand Tool (hold)	Strumento Mano (tieni premuto)
 	Zoom In (hold, drag to scrub)	Ingrandisci (tieni premuto, trascina per lo zoom continuo)
@@ -4330,6 +4419,9 @@ shape	Appearance	Aspetto
 	Photoshop by Tonynehihi can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Photoshop by Tonynehihi non può accedere agli appunti di sistema in questa sessione. Su Wayland, la sandbox di Flatpak nasconde il protocollo con cui vengono lette le immagini delle altre app.
 	To paste from other apps, start Photoshop by Tonynehihi under XWayland: `{command}`	Per incollare da altre app, avvia Photoshop by Tonynehihi in XWayland: `{command}`
 	Nothing to paste: Photoshop by Tonynehihi can't read the system clipboard here	Niente da incollare: qui Photoshop by Tonynehihi non può leggere gli appunti di sistema
+	PhotoCraft can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	PhotoCraft non può accedere agli appunti di sistema in questa sessione. Su Wayland, la sandbox di Flatpak nasconde il protocollo con cui vengono lette le immagini delle altre app.
+	To paste from other apps, start PhotoCraft under XWayland: `{command}`	Per incollare da altre app, avvia PhotoCraft in XWayland: `{command}`
+	Nothing to paste: PhotoCraft can't read the system clipboard here	Niente da incollare: qui PhotoCraft non può leggere gli appunti di sistema
 	Delete this set	Elimina questo set
 	New Set…	Nuovo set…
 	PhotoCraft Defaults	Predefiniti di Photoshop by Tonynehihi
@@ -4373,11 +4465,24 @@ shape	Appearance	Aspetto
 	GPU Memory Full	Memoria GPU piena
 	The layers need {needed} of GPU memory and may hold {budget}, so edits that redraw the whole document do it on the CPU. Click to set GPU Memory.	I livelli richiedono {needed} di memoria GPU e possono occuparne {budget}, quindi le modifiche che ridisegnano tutto il documento lo fanno sulla CPU. Fai clic per impostare Memoria GPU.
 	GPU memory budget: {budget}	Budget di memoria GPU: {budget}
+	Graphics memory: {size}	Memoria grafica: {size}
 	This document's layers: {needed} of {budget} for layers	Livelli di questo documento: {needed} su {budget} per i livelli
 	This document's layers need {needed} but may hold {budget}: whole-document redraws use the CPU	I livelli di questo documento richiedono {needed} ma possono occupare {budget}: i ridisegni dell'intero documento usano la CPU
 	GPU Memory (MB, 0 = Automatic)	Memoria GPU (MB, 0 = Automatico)
+	{path}: the path is not valid Unicode; save under another name.	{path}: il percorso non è Unicode valido; salva con un altro nome.
 	{name} was changed by another app after it was opened or saved here.	{name} è stato modificato da un'altra app dopo essere stato aperto o salvato qui.
 	Replace it with this document, or cancel and use File › Save As to keep both.	Sostituiscilo con questo documento, oppure annulla e usa File › Salva con nome per tenerli entrambi.
+	Demosaic	Demosaicizzazione
+	How the camera's colour filter mosaic is filled in. It is applied when the file opens; the preview shows the method it was opened with.	Come viene completato il mosaico del filtro colore della fotocamera. Si applica all'apertura del file; l'anteprima mostra il metodo con cui è stato aperto.
+	AHD (adaptive homogeneity)	AHD (omogeneità adattiva)
+	Malvar–He–Cutler	Malvar–He–Cutler
+	Hirakawa–Parks: the cleanest edges and the least colour fringing, the slowest.	Hirakawa–Parks: i bordi più puliti e le minori frange di colore, il più lento.
+	Gradient-corrected interpolation: sharp and fast, with some colour fringing on fine detail.	Interpolazione con correzione del gradiente: nitida e veloce, con qualche frangia di colore nei dettagli fini.
+	The fastest and the softest, with colour fringing on fine detail.	Il più veloce e il più morbido, con frange di colore nei dettagli fini.
+	“{name}” already exists. Replace it?	“{name}” esiste già. Sostituirlo?
+	The name in the save dialog was “{name}”.	Il nome nella finestra di salvataggio era “{name}”.
+	Move Up	Sposta su
+	Move Down	Sposta giù
 	Memory Usage	Utilizzo memoria
 	Per-document RAM limit (MB)	Limite RAM per documento (MB)
 	Installed RAM: {ram} MB; this limit: {percent}%	RAM installata: {ram} MB; questo limite: {percent}%
@@ -4392,9 +4497,12 @@ shape	Appearance	Aspetto
 	DDS Options	Opzioni DDS
 	Generate Mipmaps	Genera mipmap
 
+# Color Table (.act) dialog
+	There is no color table to save.	Non c'è alcuna tabella colori da salvare.
+@plural	Saved {n} color to {file}|Saved {n} colors to {file}	Salvato {n} colore in {file}|Salvati {n} colori in {file}
+
 # Graphics Adapter preference (#1885)
 	GPU adapter	Adattatore GPU
-
 # Photoshop by Tonynehihi fork strings (self-update)
 	Convert document's colors to the working space	Converti colori documento in spazio di lavoro
 	Use the embedded profile (instead of the working space)	Usa profilo incorporato (invece dello spazio di lavoro)
@@ -4402,3 +4510,22 @@ shape	Appearance	Aspetto
 	Its layers don't fit the GPU memory budget. Raising Memory usage in Preferences › Performance raises the budget, up to a quarter of this computer's memory.	I livelli non rientrano nel budget di memoria della GPU. Aumentare Uso memoria in Preferenze › Prestazioni alza il budget, fino a un quarto della memoria di questo computer.
 	Photoshop by Tonynehihi — by Tonynehihi.	Photoshop by Tonynehihi — by Tonynehihi.
 	by Tonynehihi	by Tonynehihi
+# Actions: a step dialog holds a suspended recording (#7365)
+	Confirm or cancel the open action step dialog first	Conferma o annulla prima la finestra di dialogo aperta del passo dell’azione
+	Pro Medium Gray	Pro grigio medio
+	Solarized	Solarized
+	Breeze	Breeze
+	Pro Light Gray	Pro grigio chiaro
+	Pro Light	Pro chiaro
+	Resize Windows to Fit	Ridimensiona finestre per adattare
+
+	EXR	EXR
+
+# Paragraph direction (TYPE-218-2)
+	Automatic paragraph direction	Direzione del paragrafo automatica
+	Left-to-right paragraph direction	Direzione del paragrafo da sinistra a destra
+	Right-to-left paragraph direction	Direzione del paragrafo da destra a sinistra
+	Not rendered: this adjustment ({key}) is kept as imported.	Non renderizzato: questa regolazione ({key}) viene conservata come importata.
+
+# Print preview image (#8236)
+	Print preview image	Print preview image

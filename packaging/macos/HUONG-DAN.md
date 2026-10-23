@@ -1,6 +1,6 @@
 # Photoshop by Tonynehihi — Hướng dẫn cài đặt & sử dụng
 
-Bản build cá nhân của Tony, dựa trên PhotoCraft v0.12.0 (MIT/Apache-2.0) — bản clone Photoshop bằng Rust, chạy offline, không cần Adobe.
+Bản build cá nhân của Tony, dựa trên PhotoCraft v0.14.0 (MIT/Apache-2.0) — bản clone Photoshop bằng Rust, chạy offline, không cần Adobe.
 
 Đã rebrand:
 - Tên app **"Photoshop by Tonynehihi"**, icon **PsT** phong cách Adobe (nền xanh dương)
@@ -8,12 +8,12 @@ Bản build cá nhân của Tony, dựa trên PhotoCraft v0.12.0 (MIT/Apache-2.0
 - About dialog gọn: "Photoshop by Tonynehihi — by Tonynehihi" + version
 - Đã gỡ hết link Discord / website / GitHub của upstream khỏi menu Help
 
-## Có gì mới ở bản 1.2.0
+## Có gì mới ở bản 1.3.0
 
-- **Đồng bộ PhotoCraft v0.12.0**: 41 smart filters mới (Hue/Saturation, Perspective Warp, Filter Gallery, Camera Raw...), xuất texture DDS (BC1–BC3 + mipmaps), lưu PSD Indexed giữ transparency + ICC, preview camera raw chạy nền không đơ giao diện, dialog Open/Save lọc theo từng format, thêm tuỳ chọn "Show File Name In Title".
-- **Gỡ sạch link cộng đồng upstream khỏi UI**: nút Discord, hàng link ở start screen, About/links — menu Help giờ chỉ còn đúng About / Check for Updates / System Info / Keyboard Shortcuts.
+- **Đồng bộ PhotoCraft v0.14.0** (qua v0.13.0): preview Camera Raw Develop chạy ngoài luồng UI nên kéo slider mượt, Indexed Color nhanh tới 8×, Remove Background tự tìm chủ thể trong layer, nhập màu hex cho Fill/Stroke của shape, Free Transform có widget tham chiếu 3×3, View › Extras (Cmd+H) ẩn được transform controls của Move tool, vá bảo mật khi mở file (SVG nén, PCX/XPM, file tạm/recovery), cùng nhiều fix nhỏ ở paths/pen/transform/UI.
+- **Vá lỗi icon Dock**: mở app lên là icon PsT giữ nguyên trong Dock, không còn bị đổi sang icon mặc định của eframe sau tích tắc.
 
-**Lưu ý:** đang dùng bản 1.1.0 thì khỏi build lại — mở app, Help → Check for Updates là tự lên 1.2.0. Hướng dẫn build dưới đây chỉ dành cho cài mới từ source.
+**Lưu ý:** đang dùng bản 1.2.0 thì khỏi build lại — mở app, Help → Check for Updates là tự lên 1.3.0. Hướng dẫn build dưới đây chỉ dành cho cài mới từ source.
 
 ## Gỡ bản cũ / cài lại sạch
 
@@ -49,7 +49,7 @@ Xong thì **đóng Terminal, mở lại**.
 
 ## Build & chạy
 
-**Bước 3** — Giải nén `pst-by-tonynehihi-1.2.0.zip`.
+**Bước 3** — Giải nén `pst-by-tonynehihi-1.3.0.zip`.
 
 **Bước 4** — Trong Terminal:
 ```bash

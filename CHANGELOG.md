@@ -3,6 +3,20 @@
 Personal build of PhotoCraft for Tony. Versions follow semver: patch = small
 fixes, minor = a batch of features, major = breaking changes.
 
+## 1.3.0 — 2026-10-23
+
+**SYNCS UPSTREAM PHOTOCRAFT v0.14.0** (through v0.13.0) into Photoshop by Tonynehihi, keeping the personal-build changes from 1.2.0: no upstream Discord / website / GitHub links anywhere in the UI, the Adobe-style PsT icon, and the in-app updater pointed at this repo.
+
+- **CAMERA RAW DEVELOP PREVIEW NOW RENDERS OFF THE UI THREAD** — sliders stay responsive while the preview catches up.
+- **INDEXED COLOR IS UP TO 8× FASTER**, and Remove Background now finds the subject inside the layer.
+- **HEX COLOR INPUT FOR SHAPE FILL AND STROKE**, plus a new 3×3 reference widget for Free Transform.
+- **SECURITY HARDENING WHEN OPENING FILES**: compressed SVG is no longer decompressed twice, temporary and recovery files are created safely, and PCX/XPM outputs are preflight-checked before allocating.
+- **FIXED: DOCK ICON** — PsT now keeps its own icon in the Dock instead of switching to a generic one after launch.
+- View › Extras (Cmd+H) now hides the Move tool's transform controls; the Actions automation gate and paused playbacks are more robust.
+- Many smaller fixes across paths, the pen tool, transforms and the UI.
+
+— tonynehihi
+
 ## 1.2.0 — 2026-10-22
 
 - **SYNCED WITH PHOTOCRAFT v0.12.0**: Photoshop by Tonynehihi now sits on upstream PhotoCraft v0.12.0, including everything in that feature wave.

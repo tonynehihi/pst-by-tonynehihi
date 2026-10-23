@@ -4,9 +4,13 @@
 # Integer plural forms: one|few|many (1, 21; 2–4, 22–24; 0, 5–19).
 # Rule: https://www.unicode.org/cldr/charts/48/supplemental/language_plural_rules.html#uk
 # Preserve {name} placeholders, shortcut names and trailing dialog ellipses.
-# Original translations from the meaning of Photoshop by Tonynehihi's English source keys.
+# Original translations from the meaning of PhotoCraft's English source keys.
 # No proprietary translation resources were used.
 # Licensed MIT OR Apache-2.0. See LICENSE-translations.txt and ATTRIBUTION.md.
+
+# Layer Mask Display Options (the layer mask rubylith's colour and opacity)
+	Mask Options…	Параметри маски…
+	Layer Mask Display Options…	Параметри відображення маски шару…
 
 # Channel Options and New Spot Channel (#3761)
 	Channel Color	Колір каналу
@@ -234,6 +238,7 @@
 	Inner Glow…	Внутрішнє світіння…
 	Bevel & Emboss…	Фаска та рельєф…
 	Use Global Light	Використовувати глобальне освітлення
+	Overprint	Накладання
 	Satin…	Атлас…
 	Color Overlay…	Накладання кольору…
 	Gradient Overlay…	Накладання градієнта…
@@ -504,11 +509,14 @@
 	3D	3D
 	Toolbars	Панелі інструментів
 	Hide All	Приховати все
-
-# Help
 	About Photoshop by Tonynehihi	Про Photoshop by Tonynehihi
 	Photoshop by Tonynehihi Website	Вебсайт Photoshop by Tonynehihi
 	Photoshop by Tonynehihi on GitHub	Photoshop by Tonynehihi на GitHub
+
+# Help
+	About PhotoCraft	Про PhotoCraft
+	PhotoCraft Website	Вебсайт PhotoCraft
+	PhotoCraft on GitHub	PhotoCraft на GitHub
 	Report an Issue…	Повідомити про проблему…
 	ArtCraft Website	Вебсайт ArtCraft
 	Join the ArtCraft Discord…	Приєднатися до Discord ArtCraft…
@@ -590,10 +598,12 @@
 	Load a keyboard shortcut set saved as .kys	Завантажити набір сполучень клавіш, збережений як .kys
 	Imported {n} shortcuts from {file}. Click OK to keep them.	Імпортовано сполучень клавіш: {n} із {file}. Натисніть OK, щоб зберегти їх.
 	{n} commands are not in Photoshop by Tonynehihi.	Команд, яких немає в Photoshop by Tonynehihi: {n}.
+	{n} commands are not in PhotoCraft.	Команд, яких немає в PhotoCraft: {n}.
 	Keyboard shortcuts imported	Сполучення клавіш імпортовано
 	Your keyboard shortcut set {set} is in use here: {n} shortcuts differ from the defaults. Edit › Keyboard Shortcuts shows them; Reset All to Defaults undoes this.	Тут використовується ваш набір сполучень клавіш {set}: сполучень, що відрізняються від стандартних: {n}. Їх показує Редагування › Сполучення клавіш; «Скинути все до стандартних» скасовує імпорт.
 	Import keyboard shortcuts?	Імпортувати сполучення клавіш?
 	Photoshop by Tonynehihi found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Photoshop by Tonynehihi's. Import it?	Photoshop by Tonynehihi знайшов на цьому комп'ютері ваш набір сполучень клавіш {set} з іншого графічного редактора: сполучень, що відрізняються від Photoshop by Tonynehihi: {n}. Імпортувати його?
+	PhotoCraft found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from PhotoCraft's. Import it?	PhotoCraft знайшов на цьому комп'ютері ваш набір сполучень клавіш {set} з іншого графічного редактора: сполучень, що відрізняються від PhotoCraft: {n}. Імпортувати його?
 	Edit › Keyboard Shortcuts › Reset All to Defaults undoes an import.	Редагування › Сполучення клавіш › «Скинути все до стандартних» скасовує імпорт.
 	Don't Import	Не імпортувати
 	The keyboard shortcut set was not imported: {error}	Набір сполучень клавіш не імпортовано: {error}
@@ -759,6 +769,7 @@
 	Set shape fill type	Установити тип заливки фігури
 	Set shape stroke type	Установити тип обведення фігури
 	Set the text color	Установити колір тексту
+	Create warped text	Створити деформований текст
 	Only Web Colors	Лише вебкольори
 	Overlay Color	Колір накладання
 	Overlay Opacity	Непрозорість накладання
@@ -897,6 +908,7 @@
 	Assign Profile…	Призначити профіль…
 	Convert to Profile…	Перетворити на профіль…
 	Photoshop by Tonynehihi Manages Colors	Photoshop by Tonynehihi керує кольорами
+	PhotoCraft Manages Colors	PhotoCraft керує кольорами
 	Printer Manages Colors	Принтер керує кольорами
 	(print to the printer)	(друк на принтері)
 	Absolute Colorimetric	Абсолютний колориметричний
@@ -1041,6 +1053,8 @@
 	No brush presets	Немає наборів пензлів
 	Override Pressure	Перевизначити натиск
 	Override Tilt	Перевизначити нахил
+	Override Tilt X	Перевизначити нахил X
+	Override Tilt Y	Перевизначити нахил Y
 	Override Rotation	Перевизначити обертання
 	Apply the pen's tilt and rotation to the tip shape	Застосувати нахил і обертання пера до форми кінчика
 
@@ -1170,6 +1184,7 @@
 	Clipping Path	Відсічний контур
 	New Path	Новий контур
 	Duplicate Path	Дублювати контур
+	Rename Path…	Перейменувати контур…
 	Delete Path	Видалити контур
 	Current Path	Поточний контур
 	Vector Mask from Current Path	Векторна маска з поточного контуру
@@ -1319,6 +1334,8 @@
 	Keywords	Ключові слова
 	Copyright Info URL	URL інформації про авторське право
 	Copyright Status	Статус авторського права
+	Copyright Notice	Застереження про авторські права
+	Document Title	Назва документа
 	Copyrighted	Захищено авторським правом
 	Public Domain	Суспільне надбання
 	Unknown	Невідомо
@@ -1496,6 +1513,8 @@
 	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or copy the image in your file manager and paste it with {paste}.	Нативне перетягування файлів у Wayland ще не підтримується. Скористайтеся меню Файл › Відкрити або скопіюйте зображення у файловому менеджері та вставте його за допомогою {paste}.
 	To drop files, start Photoshop by Tonynehihi under XWayland: `{command}`	Щоб перетягувати файли, запустіть Photoshop by Tonynehihi під XWayland: `{command}`
 	Or set Preferences › Performance › Linux display server to X11: Photoshop by Tonynehihi then always starts under XWayland.	Або виберіть X11 у Налаштування › Продуктивність › Сервер відображення Linux: Photoshop by Tonynehihi завжди запускатиметься під XWayland.
+	To drop files, start PhotoCraft under XWayland: `{command}`	Щоб перетягувати файли, запустіть PhotoCraft під XWayland: `{command}`
+	Or set Preferences › Performance › Linux display server to X11: PhotoCraft then always starts under XWayland.	Або виберіть X11 у Налаштування › Продуктивність › Сервер відображення Linux: PhotoCraft завжди запускатиметься під XWayland.
 	Edit › Paste	Редагування › Вставити
 	Photo	Фото
 	Print	Друк
@@ -1503,6 +1522,7 @@
 	Mobile	Мобільні пристрої
 	Film & Video	Фільм і відео
 	Default Photoshop by Tonynehihi Size	Типовий розмір Photoshop by Tonynehihi
+	Default PhotoCraft Size	Типовий розмір PhotoCraft
 	Clipboard	Буфер обміну
 	Photo (2 × 3 in)	Фото (2 × 3 дюйми)
 	Photo (4 × 6 in)	Фото (4 × 6 дюймів)
@@ -1561,7 +1581,7 @@
 	Click to restore the current colour	Клацніть, щоб відновити поточний колір
 	Click with the Note tool to add a note.	Клацніть інструментом «Нотатка», щоб додати нотатку.
 	Drag a rectangle around the object	Намалюйте прямокутник навколо об'єкта
-	Drag on the image to add a constraint; Shift for horizontal/vertical; right-click to delete.	Перетягніть на зображенні, щоб додати обмеження; Shift для горизонталі/вертикалі; праве клацання для видалення.
+	Drag on the image to add a constraint; Shift for horizontal/vertical; right-click a constraint to change or delete it.	Перетягніть на зображенні, щоб додати обмеження; Shift для горизонталі/вертикалі; клацніть правою кнопкою на обмеженні, щоб змінити або видалити його.
 	Drag the arrow to set the angle, the dots to set the roundness	Перетягніть стрілку, щоб установити кут, а точки — округлість
 	Create new pattern from the selection	Створити новий візерунок із виділення
 	Create new gradient	Створити новий градієнт
@@ -1655,6 +1675,7 @@
 	Align with layer	Вирівняти за шаром
 	Join us on Discord	Приєднуйтеся до нас у Discord
 	Photoshop by Tonynehihi website	Вебсайт Photoshop by Tonynehihi
+	PhotoCraft website	Вебсайт PhotoCraft
 	ArtCraft	ArtCraft
 	GitHub	GitHub
 	No character style	Без стилю символів
@@ -1681,8 +1702,10 @@
 	No	Ні
 	Yes	Так
 	These settings aren't available in Photoshop by Tonynehihi yet.	Ці параметри ще недоступні у Photoshop by Tonynehihi.
+	These settings aren't available in PhotoCraft yet.	Ці параметри ще недоступні у PhotoCraft.
 	Shortcut removed.	Клавіатурне скорочення вилучено.
 	All shortcuts reset to Photoshop by Tonynehihi defaults.	Усі клавіатурні скорочення скинуто до типових значень Photoshop by Tonynehihi.
+	All shortcuts reset to PhotoCraft defaults.	Усі клавіатурні скорочення скинуто до типових значень PhotoCraft.
 	Add Shortcut	Додати клавіатурне скорочення
 	Delete Shortcut	Видалити клавіатурне скорочення
 	Press keys…	Натисніть клавіші…
@@ -2172,6 +2195,8 @@
 	Pattern Size	Розмір візерунка
 	Photoshop by Tonynehihi	Photoshop by Tonynehihi
 	Photoshop by Tonynehihi — an open-source, native image editor written in Rust.	Photoshop by Tonynehihi — нативний редактор зображень із відкритим кодом, написаний на Rust.
+	PhotoCraft	PhotoCraft
+	PhotoCraft — an open-source, native image editor written in Rust.	PhotoCraft — нативний редактор зображень із відкритим кодом, написаний на Rust.
 	Position and Size	Положення та розмір
 	Preserve Details	Зберігати деталі
 	Preserve Luminosity	Зберігати світність
@@ -2391,6 +2416,7 @@
 	Quick export format	Формат швидкого експорту
 	Quick export location	Розташування швидкого експорту
 	Recent file count	Кількість нещодавніх файлів
+	LUT folder	Папка LUT
 	Recent files	Нещодавні файли
 	Recent fonts	Нещодавні шрифти
 	Recover on launch	Відновлювати під час запуску
@@ -2485,7 +2511,10 @@
 	Switched to CPU rendering	Перехід на рендеринг CPU
 	GPU acceleration could not continue. Your documents are unchanged.	Прискорення GPU не може продовжувати роботу. Ваші документи не змінено.
 	Photoshop by Tonynehihi is using the CPU image compositor. The window may still use your graphics adapter.	Photoshop by Tonynehihi використовує компонувальник зображень CPU. Вікно може й далі використовувати ваш графічний адаптер.
+	PhotoCraft is using the CPU image compositor. The window may still use your graphics adapter.	PhotoCraft використовує компонувальник зображень CPU. Вікно може й далі використовувати ваш графічний адаптер.
 	Retry GPU requires a restart. Save your work first.	Повторна спроба використати GPU потребує перезапуску. Спочатку збережіть роботу.
+	Retry GPU tries the graphics processor again now.	Повторити спробу з GPU — одразу знову спробувати графічний процесор.
+	GPU acceleration resumed.	Прискорення GPU відновлено.
 	Keep Using CPU	Продовжити з CPU
 	Retry GPU	Повторити спробу з GPU
 	GPU Backend	Графічний бекенд
@@ -2552,6 +2581,11 @@ cameraRaw	Roughness	Шорсткість
 	Content-Aware Move Tool	Інструмент «Переміщення з урахуванням вмісту»
 	TIFF Options	Параметри TIFF
 	Targa Options	Параметри Targa
+	JPEG Options	Параметри JPEG
+	Image Options	Параметри зображення
+	Format Options	Різновид формату
+	Baseline ("Standard")	Базовий («Стандартний»)
+	Baseline Optimized	Базовий оптимізований
 	24 bits/pixel	24 біт/піксель
 	32 bits/pixel	32 біт/піксель
 	Including layers will increase file size.	Додавання шарів збільшить розмір файлу.
@@ -3727,6 +3761,7 @@ cameraData	Lens	Об'єктив
 	Search settings…	Пошук налаштувань…
 	No matching settings	Немає відповідних налаштувань
 	Photoshop by Tonynehihi — Screen Color Picker	Photoshop by Tonynehihi — Піпетка кольору екрана
+	PhotoCraft — Screen Color Picker	PhotoCraft — Піпетка кольору екрана
 # Edit › Content-Aware Fill workspace
 	Sampling Brush Tool	Пензель області вибірки
 	Sampling Area Overlay	Накладання області вибірки
@@ -3743,6 +3778,32 @@ cameraData	Lens	Об'єктив
 	Mirror	Віддзеркалення
 	Output Settings	Параметри виводу
 	Output To	Вивести в
+
+	Animation Options	Параметри анімації
+	Entire Document	Увесь документ
+	Filter Options	Параметри фільтрів
+	Layer Bounds	Межі шару
+	Layers Panel Options	Параметри панелі «Шари»
+	New Artboard…	Нова монтажна область…
+	New Group…	Нова група…
+	Prevent Auto-Nesting	Заборонити автоматичне вкладення
+	Show Layers	Показати шари
+	Thumbnail Contents	Вміст мініатюр
+	Thumbnail Size	Розмір мініатюр
+	Use Default Masks on Fill Layers	Використовувати типові маски для шарів заливки
+	Expand New Effects	Розгортати нові ефекти
+	Add “copy” to Copied Layers and Groups	Додавати «копія» до скопійованих шарів і груп
+	Preview on canvas when reordering layers	Попередній перегляд на полотні під час зміни порядку шарів
+	Show layer mask badges	Показувати позначки масок шарів
+
+# Smart Filter editors
+	Blending Options ({filter})	Параметри накладання ({filter})
+	Hide the layer's effects and Smart Filters  ({key}-click: all layers)	Приховати ефекти шару та смарт-фільтри  ({key}-клік: усі шари)
+	Show the layer's effects and Smart Filters  ({key}-click: all layers)	Показати ефекти шару та смарт-фільтри  ({key}-клік: усі шари)
+	Wait for the current job to finish.	Дочекайтеся завершення поточного завдання.
+	The document or Smart Filter changed. Reopen its dialog.	Документ або смарт-фільтр змінився. Відкрийте його діалог знову.
+	Opacity must be between 0% and 100%.	Непрозорість має бути від 0% до 100%.
+	Dissolve is approximated: it blends without Photoshop's dither.	Розчинення наближене: змішування без дизерингу Photoshop.
 	Loading fonts…	Завантаження шрифтів…
 	Response curve	Крива відгуку
 	Simulate Pressure	Імітувати натиск
@@ -3836,9 +3897,16 @@ curves	Smooth	Згладити
 	Light Gray	Світло-сірий
 	Object Finder	Пошук об’єктів
 	No object found there — drag a rectangle around it	Там не знайдено об’єкта — обведіть його прямокутником
+	The active layer has no pixels here — turn on Sample All Layers or select a layer with pixels	В активному шарі тут немає пікселів — увімкніть «Зразок з усіх шарів» або виберіть шар із пікселями
 	Remove after each stroke	Видаляти після кожного штриха
 	Apply the removal ({key})	Застосувати видалення ({key})
 	Strokes to remove: {n} (Enter applies, Esc cancels)	Штрихів для видалення: {n} (Enter застосовує, Esc скасовує)
+	Load Contours…	Завантажити контури…
+	Replace Contours…	Замінити контури…
+	Save Contours…	Зберегти контури…
+	Delete Contour	Видалити контур
+	Loaded contours from {file}	Контури завантажено з {file}
+	Saved contours to {file}	Контури збережено в {file}
 	Show home recent files	Показувати нещодавні файли на головному екрані
 	Clear Brush Controls	Очистити параметри пензля
 	Reset All Locked Settings	Скинути всі заблоковані параметри
@@ -3847,10 +3915,14 @@ curves	Smooth	Згладити
 # Actions panel: Load/Save Actions (.atn) and kept Photoshop steps
 	Load Actions…	Завантажити операції…
 	Save Actions…	Зберегти операції…
+	New Action…	Нова операція…
+	Start Recording	Почати запис
+	Stop Recording	Зупинити запис
 	{name} (Photoshop)	{name} (Photoshop)
 	{message} ({note})	{message} ({note})
 @plural	Loaded {n} action from {file}|Loaded {n} actions from {file}	Завантажено {n} операцію з {file}|Завантажено {n} операції з {file}|Завантажено {n} операцій з {file}
 @plural	{n} step has no Photoshop by Tonynehihi equivalent yet|{n} steps have no Photoshop by Tonynehihi equivalent yet	{n} крок ще не має відповідника в Photoshop by Tonynehihi|{n} кроки ще не мають відповідника в Photoshop by Tonynehihi|{n} кроків ще не мають відповідника в Photoshop by Tonynehihi
+@plural	{n} step has no PhotoCraft equivalent yet|{n} steps have no PhotoCraft equivalent yet	{n} крок ще не має відповідника в PhotoCraft|{n} кроки ще не мають відповідника в PhotoCraft|{n} кроків ще не мають відповідника в PhotoCraft
 @plural	Saved {n} action to {file}|Saved {n} actions to {file}	Збережено {n} операцію до {file}|Збережено {n} операції до {file}|Збережено {n} операцій до {file}
 @plural	{n} step with no Photoshop equivalent left out|{n} steps with no Photoshop equivalent left out	Пропущено {n} крок без відповідника в Photoshop|Пропущено {n} кроки без відповідника в Photoshop|Пропущено {n} кроків без відповідника в Photoshop
 
@@ -3881,6 +3953,13 @@ curves	Smooth	Згладити
 # History panel › History Brush source (#2966)
 	Paints from the History panel's source state	Малює з вихідного стану панелі «Історія»
 	Sets the source for the history brush	Задає джерело для пензля історії
+# Bevel & Emboss shading controls.
+	Highlight Mode	Режим світлих тонів
+	Highlight Color	Колір світлих тонів
+	Highlight Opacity	Непрозорість світлих тонів
+	Shadow Mode	Режим тіней
+	Shadow Color	Колір тіней
+	Shadow Opacity	Непрозорість тіней
 # Embedded Profile Mismatch: profile names beside the choices, Remember this choice
 	Use the embedded profile ({profile})	Використати вбудований профіль ({profile})
 	Convert to the working space ({profile})	Перетворити в робочий простір ({profile})
@@ -3897,6 +3976,7 @@ curves	Smooth	Згладити
 	Chisel Hard	Жорстке різьблення
 	Chisel Soft	М'яке різьблення
 	Open color-less EXR as ACEScg	Відкривати EXR без колірного профілю як ACEScg
+	Do not append "copy" to filename when saving a copy	Не додавати «copy» до імені файлу під час збереження копії
 
 # View › Guides › right-click a guide
 	Edit Selected Guides	Редагувати вибрані напрямні
@@ -3908,6 +3988,9 @@ curves	Smooth	Згладити
 	Photoshop by Tonynehihi can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	У цьому сеансі Photoshop by Tonynehihi не має доступу до системного буфера обміну. У Wayland пісочниця Flatpak приховує протокол, через який читаються зображення з інших застосунків.
 	To paste from other apps, start Photoshop by Tonynehihi under XWayland: `{command}`	Щоб вставляти з інших застосунків, запустіть Photoshop by Tonynehihi під XWayland: `{command}`
 	Nothing to paste: Photoshop by Tonynehihi can't read the system clipboard here	Нічого вставити: тут Photoshop by Tonynehihi не може прочитати системний буфер обміну
+	PhotoCraft can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	У цьому сеансі PhotoCraft не має доступу до системного буфера обміну. У Wayland пісочниця Flatpak приховує протокол, через який читаються зображення з інших застосунків.
+	To paste from other apps, start PhotoCraft under XWayland: `{command}`	Щоб вставляти з інших застосунків, запустіть PhotoCraft під XWayland: `{command}`
+	Nothing to paste: PhotoCraft can't read the system clipboard here	Нічого вставити: тут PhotoCraft не може прочитати системний буфер обміну
 	Delete this set	Видалити цей набір
 	New Set…	Новий набір…
 	PhotoCraft Defaults	Стандартні Photoshop by Tonynehihi
@@ -3951,9 +4034,11 @@ curves	Smooth	Згладити
 	GPU Memory Full	Пам'ять GPU заповнена
 	The layers need {needed} of GPU memory and may hold {budget}, so edits that redraw the whole document do it on the CPU. Click to set GPU Memory.	Шарам потрібно {needed} пам'яті GPU, а займати вони можуть {budget}, тому зміни, що перемальовують увесь документ, виконуються на CPU. Натисніть, щоб задати «Пам'ять GPU».
 	GPU memory budget: {budget}	Бюджет пам'яті GPU: {budget}
+	Graphics memory: {size}	Відеопам'ять: {size}
 	This document's layers: {needed} of {budget} for layers	Шари цього документа: {needed} з {budget} для шарів
 	This document's layers need {needed} but may hold {budget}: whole-document redraws use the CPU	Шарам цього документа потрібно {needed}, але займати вони можуть {budget}: увесь документ перемальовується на CPU
 	GPU Memory (MB, 0 = Automatic)	Пам'ять GPU (МБ, 0 = автоматично)
+	{path}: the path is not valid Unicode; save under another name.	{path}: шлях не є коректним Unicode; збережіть під іншою назвою.
 	Replace	Замінити
 	{name} was changed by another app after it was opened or saved here.	Файл {name} змінила інша програма після того, як його тут відкрили або зберегли.
 	Replace it with this document, or cancel and use File › Save As to keep both.	Замініть його цим документом або скасуйте й скористайтеся Файл › Зберегти як, щоб зберегти обидва.
@@ -3961,6 +4046,13 @@ curves	Smooth	Згладити
 	Increase Brush Size	Збільшити розмір пензля
 	Decrease Brush Hardness	Зменшити жорсткість пензля
 	Increase Brush Hardness	Збільшити жорсткість пензля
+	“{name}” already exists. Replace it?	«{name}» уже існує. Замінити?
+	The name in the save dialog was “{name}”.	У вікні збереження було вказано назву «{name}».
+	Previous Brush	Попередній пензель
+	Next Brush	Наступний пензель
+	First Brush	Перший пензель
+	Last Brush	Останній пензель
+	Preview size	Preview size
 # Dynamic color-picker titles and warnings about losing editable layer content.
 	Color Picker (Background Color)	Вибір кольору (колір тла)
 	Color Picker (Foreground Color)	Вибір кольору (основний колір)
@@ -3969,6 +4061,15 @@ curves	Smooth	Згладити
 	This shape layer must be rasterized before proceeding. It will no longer be editable as a shape. Rasterize the shape?	Щоб продовжити, потрібно растеризувати цей шар фігури. Після цього його більше не можна буде редагувати як фігуру. Растеризувати фігуру?
 	This Smart Object must be rasterized before proceeding. Its contents will no longer be editable. Rasterize the Smart Object?	Щоб продовжити, потрібно растеризувати цей смартоб’єкт. Після цього його вміст більше не можна буде редагувати. Растеризувати смартоб’єкт?
 	This fill layer must be rasterized before proceeding. Its fill content will no longer be editable. Rasterize the layer?	Щоб продовжити, потрібно растеризувати цей шар заливки. Після цього його заливку більше не можна буде редагувати. Растеризувати шар?
+	Demosaic	Демозаїк
+	How the camera's colour filter mosaic is filled in. It is applied when the file opens; the preview shows the method it was opened with.	Як відновлюється мозаїка кольорового фільтра камери. Застосовується під час відкриття файлу; попередній перегляд показує метод, з яким файл було відкрито.
+	AHD (adaptive homogeneity)	AHD (адаптивна однорідність)
+	Malvar–He–Cutler	Malvar–He–Cutler
+	Hirakawa–Parks: the cleanest edges and the least colour fringing, the slowest.	Хіракава–Паркс: найчистіші краї й найменше кольорової облямівки, найповільніший.
+	Gradient-corrected interpolation: sharp and fast, with some colour fringing on fine detail.	Інтерполяція з корекцією градієнта: різка й швидка, з невеликою кольоровою облямівкою на дрібних деталях.
+	The fastest and the softest, with colour fringing on fine detail.	Найшвидший і найм'якший, з кольоровою облямівкою на дрібних деталях.
+	Move Up	Перемістити вгору
+	Move Down	Перемістити вниз
 	Memory Usage	Використання пам’яті
 	Per-document RAM limit (MB)	Ліміт RAM на документ (МБ)
 	Installed RAM: {ram} MB; this limit: {percent}%	Встановлено RAM: {ram} МБ; цей ліміт: {percent}%
@@ -3984,9 +4085,12 @@ curves	Smooth	Згладити
 	Compression	Стиснення
 	Generate Mipmaps	Створити MIP-карти
 
+# Color Table (.act) dialog
+	There is no color table to save.	Немає таблиці кольорів для збереження.
+@plural	Saved {n} color to {file}|Saved {n} colors to {file}	Збережено {n} колір у {file}|Збережено {n} кольори у {file}|Збережено {n} кольорів у {file}
+
 # Graphics Adapter preference (#1885)
 	GPU adapter	Адаптер GPU
-
 # Photoshop by Tonynehihi fork strings (self-update)
 	Convert document's colors to the working space	Перетворити кольори документа в робочий простір
 	Use the embedded profile (instead of the working space)	Використати вбудований профіль (замість робочого простору)
@@ -3996,3 +4100,22 @@ curves	Smooth	Згладити
 	Check for Updates	Перевірити оновлення
 	Photoshop by Tonynehihi — by Tonynehihi.	Photoshop by Tonynehihi — by Tonynehihi.
 	by Tonynehihi	by Tonynehihi
+# Actions: a step dialog holds a suspended recording (#7365)
+	Confirm or cancel the open action step dialog first	Спочатку підтвердьте або скасуйте відкритий діалог кроку операції
+	Pro Medium Gray	Середньосіра «Профі»
+	Solarized	Solarized
+	Breeze	Breeze
+	Pro Light Gray	Світло-сіра «Профі»
+	Pro Light	Світла «Профі»
+	Resize Windows to Fit	Підганяти розмір вікон
+
+	EXR	EXR
+
+# Paragraph direction (TYPE-218-2)
+	Automatic paragraph direction	Автоматичний напрямок абзацу
+	Left-to-right paragraph direction	Напрямок абзацу зліва направо
+	Right-to-left paragraph direction	Напрямок абзацу справа наліво
+	Not rendered: this adjustment ({key}) is kept as imported.	Не відображається: це коригування ({key}) збережено як було імпортовано.
+
+# Print preview image (#8236)
+	Print preview image	Print preview image

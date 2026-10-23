@@ -3,7 +3,7 @@
 //! - **Executable:** `build.rs` embeds `assets/app-icon/photocraft.ico` (16–256 px) as icon
 //!   resource 1, which Explorer, Alt+Tab and an unpinned taskbar button fall back to.
 //! - **Window:** [`window_icon`] sets the title-bar and taskbar icon at runtime (`WM_SETICON` on
-//!   Windows, `_NET_WM_ICON` on X11, the Dock when running unbundled on macOS).
+//!   Windows, `_NET_WM_ICON` on X11, the Dock on macOS).
 //! - **Start Menu shortcut (MSI):** the taskbar matches a running window to the shortcut that
 //!   launches its executable and shows that shortcut's icon. Windows Installer caches an advertised
 //!   shortcut's icon under its `<Icon Id>`, so that id must carry the target's `.exe` extension
@@ -14,7 +14,7 @@
 //! ID would need a Win32 call (`unsafe`, which the workspace forbids) and would then also have to
 //! be stamped on the shortcut, or the taskbar would stop matching the two.
 
-/// Window, taskbar and (when running unbundled) Dock icon. macOS gets the padded 1024 px render
+/// Window, taskbar and Dock icon. macOS gets the padded 1024 px render
 /// on Apple's icon grid; elsewhere the tighter 256 px hicolor render reads better at small sizes.
 pub fn window_icon() -> egui::IconData {
     match eframe::icon_data::from_png_bytes(PNG) {
@@ -26,23 +26,15 @@ pub fn window_icon() -> egui::IconData {
     }
 }
 
-/// Whether the window gets [`window_icon`] at runtime: everywhere except inside a macOS app
-/// bundle. There the Dock shows the bundle's `PhotoCraft.icns` (`CFBundleIconFile`), which macOS
-/// renders in its own style (Liquid Glass and its tinted and dark variants); a runtime PNG
-/// replaced it with a flat picture (#5849). `exe` is the running executable.
-pub fn sets_runtime_icon(exe: Option<&std::path::Path>) -> bool {
-    !(cfg!(target_os = "macos") && exe.is_some_and(in_app_bundle))
-}
-
-/// Whether `exe` is an app bundle's executable: `…/Name.app/Contents/MacOS/binary`.
-fn in_app_bundle(exe: &std::path::Path) -> bool {
-    let name = |p: Option<&std::path::Path>| p.and_then(|p| p.file_name()).map(|n| n.to_string_lossy().into_owned());
-    let macos = exe.parent();
-    let contents = macos.and_then(std::path::Path::parent);
-    let bundle = contents.and_then(std::path::Path::parent);
-    name(macos).as_deref() == Some("MacOS")
-        && name(contents).as_deref() == Some("Contents")
-        && name(bundle).is_some_and(|n| n.len() > 4 && n.to_ascii_lowercase().ends_with(".app"))
+/// Value for [`egui::ViewportBuilder::with_icon`]: always [`window_icon`], on every platform.
+///
+/// Fork change (PsT — keep across upstream merges): upstream skipped the runtime icon inside a
+/// macOS app bundle, trusting the bundle's `.icns` to stay on the Dock (#5849). On eframe 0.36.2
+/// that does not hold: the Dock shows this app's icon for a moment at launch, then switches to
+/// eframe's default glyph. Like the sibling LrT build, this fork therefore always passes its
+/// real icon at runtime.
+pub fn viewport_icon() -> egui::IconData {
+    window_icon()
 }
 
 #[cfg(target_os = "macos")]
@@ -64,20 +56,14 @@ mod tests {
         u32::from_le_bytes([b[i], b[i + 1], b[i + 2], b[i + 3]]) as usize
     }
 
-    /// #5849: a macOS app bundle keeps its .icns in the Dock; unbundled runs (cargo run, the
-    /// Linux and Windows builds) still set the runtime icon.
+    /// Fork: the viewport icon is always the app's real icon — never the empty default that
+    /// let eframe substitute its own glyph on the Dock after launch (#7253).
     #[test]
-    fn only_a_macos_app_bundle_skips_the_runtime_icon() {
-        use std::path::Path;
-        assert!(in_app_bundle(Path::new("/Applications/PhotoCraft.app/Contents/MacOS/photocraft")));
-        assert!(in_app_bundle(Path::new("/Users/a/Downloads/PhotoCraft Beta.APP/Contents/MacOS/photocraft")));
-        assert!(!in_app_bundle(Path::new("/Users/a/src/photocraft/target/release/photocraft")));
-        assert!(!in_app_bundle(Path::new("/opt/Contents/MacOS/photocraft")), "not inside a .app");
-        assert!(!in_app_bundle(Path::new("/.app/Contents/MacOS/photocraft")), "a bare `.app` is no bundle name");
-        assert!(!in_app_bundle(Path::new("photocraft")));
-        assert!(sets_runtime_icon(None));
-        assert!(sets_runtime_icon(Some(Path::new("/usr/bin/photocraft"))));
-        assert_eq!(sets_runtime_icon(Some(Path::new("/Applications/PhotoCraft.app/Contents/MacOS/photocraft"))), !cfg!(target_os = "macos"));
+    fn viewport_icon_is_always_the_app_icon() {
+        let icon = viewport_icon();
+        assert!(icon.width >= 256 && icon.width == icon.height);
+        assert_eq!(icon, window_icon());
+        assert_ne!(icon, egui::IconData::default());
     }
 
     #[test]

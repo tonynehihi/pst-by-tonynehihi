@@ -16,8 +16,12 @@
 # particular not the Czech localisation of Adobe Photoshop. Add entries the same way.
 # Conventions: menus are nouns (Soubor, Úpravy, Obraz ...), commands are infinitives (Otevřít…,
 # Uložit jako…), sentence case as in the English source. Product and technology names
-# (Photoshop by Tonynehihi, ArtCraft, OpenType, CMYK, Lab ...) stay in Latin letters; the trailing "…" of
+# (PhotoCraft, ArtCraft, OpenType, CMYK, Lab ...) stay in Latin letters; the trailing "…" of
 # dialog commands is kept.
+
+# Layer Mask Display Options (the layer mask rubylith's colour and opacity)
+	Mask Options…	Možnosti masky…
+	Layer Mask Display Options…	Možnosti zobrazení masky vrstvy…
 
 # Channel Options and New Spot Channel (#3761)
 	Channel Color	Barva kanálu
@@ -334,6 +338,7 @@
 	Blending Options…	Možnosti prolnutí…
 	Bevel & Emboss…	Úkos a reliéf…
 	Use Global Light	Použít globální světlo
+	Overprint	Přetisk
 	Inner Shadow…	Vnitřní stín…
 	Inner Glow…	Vnitřní záře…
 	Satin…	Satén…
@@ -799,6 +804,9 @@
 	About Photoshop by Tonynehihi	O aplikaci Photoshop by Tonynehihi
 	Photoshop by Tonynehihi Website	Web Photoshop by Tonynehihi
 	Photoshop by Tonynehihi on GitHub	Photoshop by Tonynehihi na GitHubu
+	About PhotoCraft	O aplikaci PhotoCraft
+	PhotoCraft Website	Web PhotoCraft
+	PhotoCraft on GitHub	PhotoCraft na GitHubu
 	ArtCraft Website	Web ArtCraft
 	Join the ArtCraft Discord…	Připojit se k Discordu ArtCraft…
 	Report an Issue…	Nahlásit problém…
@@ -861,6 +869,7 @@
 	All Slices	Všechny řezy
 	All User Slices	Všechny uživatelské řezy
 	All shortcuts reset to Photoshop by Tonynehihi defaults.	Všechny zkratky byly obnoveny na výchozí hodnoty Photoshop by Tonynehihiu.
+	All shortcuts reset to PhotoCraft defaults.	Všechny zkratky byly obnoveny na výchozí hodnoty PhotoCraftu.
 	Alt	Alt
 	Always use pressure for opacity	Vždy použít přítlak pro krytí
 	Always use pressure for size	Vždy použít přítlak pro velikost
@@ -1104,7 +1113,7 @@
 	Done	Hotovo
 	Dots	Tečky
 	Drag a rectangle around the object	Táhněte obdélník kolem objektu
-	Drag on the image to add a constraint; Shift for horizontal/vertical; right-click to delete.	Tažením v obraze přidáte omezení; Shift pro vodorovné/svislé; pravým kliknutím odstraníte.
+	Drag on the image to add a constraint; Shift for horizontal/vertical; right-click a constraint to change or delete it.	Tažením v obraze přidáte omezení; Shift pro vodorovné/svislé; pravým kliknutím na omezení ho změníte nebo odstraníte.
 	Drag to move the active shape's path or the Work Path	Tažením přesunete cestu aktivního tvaru nebo pracovní cestu
 	Click: select anchor · Drag: move anchor, handle or segment · {shift}-click: add · {alt}-click: whole subpath	Klik: vybrat bod · Tažení: přesunout bod, úchyt nebo segment · {shift}+klik: přidat · {alt}+klik: celá podcesta
 	Draw with the Pen tool (P) or make a work path from a selection.	Kreslete nástrojem pero (P) nebo vytvořte pracovní cestu z výběru.
@@ -1113,6 +1122,8 @@
 	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or copy the image in your file manager and paste it with {paste}.	Nativní přetahování souborů ve Waylandu zatím není podporováno. Použijte Soubor › Otevřít, nebo obrázek zkopírujte ve správci souborů a vložte ho pomocí {paste}.
 	To drop files, start Photoshop by Tonynehihi under XWayland: `{command}`	Chcete-li soubory přetahovat, spusťte Photoshop by Tonynehihi v XWayland: `{command}`
 	Or set Preferences › Performance › Linux display server to X11: Photoshop by Tonynehihi then always starts under XWayland.	Nebo nastavte Předvolby › Výkon › Zobrazovací server Linuxu na X11: Photoshop by Tonynehihi se pak vždy spustí v XWayland.
+	To drop files, start PhotoCraft under XWayland: `{command}`	Chcete-li soubory přetahovat, spusťte PhotoCraft v XWayland: `{command}`
+	Or set Preferences › Performance › Linux display server to X11: PhotoCraft then always starts under XWayland.	Nebo nastavte Předvolby › Výkon › Zobrazovací server Linuxu na X11: PhotoCraft se pak vždy spustí v XWayland.
 	Edit › Paste	Úpravy › Vložit
 	Duplicate Layers…	Duplikovat vrstvy…
 	Duplicate style	Duplikovat styl
@@ -1346,6 +1357,8 @@
 	Override Pressure	Přepsat přítlak
 	Override Rotation	Přepsat natočení
 	Override Tilt	Přepsat náklon
+	Override Tilt X	Přepsat náklon X
+	Override Tilt Y	Přepsat náklon Y
 	PRESET DETAILS	PODROBNOSTI PŘEDNASTAVENÍ
 	PSD	PSD
 	Paint Overlay	Překryv malby
@@ -1363,6 +1376,9 @@
 	Photoshop by Tonynehihi	Photoshop by Tonynehihi
 	Photoshop by Tonynehihi Manages Colors	Barvy spravuje Photoshop by Tonynehihi
 	Photoshop by Tonynehihi — an open-source, native image editor written in Rust.	Photoshop by Tonynehihi — nativní editor obrázků s otevřeným zdrojovým kódem napsaný v jazyce Rust.
+	PhotoCraft	PhotoCraft
+	PhotoCraft Manages Colors	Barvy spravuje PhotoCraft
+	PhotoCraft — an open-source, native image editor written in Rust.	PhotoCraft — nativní editor obrázků s otevřeným zdrojovým kódem napsaný v jazyce Rust.
 	Pin Depth:	Hloubka špendlíku:
 	Pixel Length:	Délka v pixelech:
 	Pixels/Centimeter	Pixely/centimetr
@@ -1439,10 +1455,12 @@
 	Load a keyboard shortcut set saved as .kys	Načíst sadu klávesových zkratek uloženou jako .kys
 	Imported {n} shortcuts from {file}. Click OK to keep them.	Importováno zkratek: {n} ze souboru {file}. Klepnutím na OK je ponecháte.
 	{n} commands are not in Photoshop by Tonynehihi.	Příkazů, které v Photoshop by Tonynehihiu nejsou: {n}.
+	{n} commands are not in PhotoCraft.	Příkazů, které v PhotoCraftu nejsou: {n}.
 	Keyboard shortcuts imported	Klávesové zkratky importovány
 	Your keyboard shortcut set {set} is in use here: {n} shortcuts differ from the defaults. Edit › Keyboard Shortcuts shows them; Reset All to Defaults undoes this.	Vaše sada klávesových zkratek {set} se zde používá: {n} zkratek se liší od výchozích. Zobrazí je Úpravy › Klávesové zkratky; Obnovit vše na výchozí to vrátí zpět.
 	Import keyboard shortcuts?	Importovat klávesové zkratky?
 	Photoshop by Tonynehihi found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Photoshop by Tonynehihi's. Import it?	Photoshop by Tonynehihi na tomto počítači našel vaši sadu klávesových zkratek {set} z jiného editoru obrázků: {n} jejích zkratek se liší od zkratek Photoshop by Tonynehihiu. Importovat ji?
+	PhotoCraft found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from PhotoCraft's. Import it?	PhotoCraft na tomto počítači našel vaši sadu klávesových zkratek {set} z jiného editoru obrázků: {n} jejích zkratek se liší od zkratek PhotoCraftu. Importovat ji?
 	Edit › Keyboard Shortcuts › Reset All to Defaults undoes an import.	Úpravy › Klávesové zkratky › Obnovit vše na výchozí import vrátí zpět.
 	Don't Import	Neimportovat
 	The keyboard shortcut set was not imported: {error}	Sada klávesových zkratek nebyla importována: {error}
@@ -1498,6 +1516,7 @@
 	Set shape fill type	Nastavit typ výplně tvaru
 	Set shape stroke type	Nastavit typ tahu tvaru
 	Set the text color	Nastavit barvu textu
+	Create warped text	Vytvořit deformovaný text
 	Shadows	Stíny
 	Shape:	Tvar:
 	Sharpening	Doostření
@@ -1672,6 +1691,7 @@
 	Custom Shape Tool	Nástroj vlastní tvar
 	Cyans	Azurové
 	Default Photoshop by Tonynehihi Size	Výchozí velikost Photoshop by Tonynehihi
+	Default PhotoCraft Size	Výchozí velikost PhotoCraft
 	Delete Workspace	Odstranit pracovní prostor
 	Diamond	Kosočtverec
 	Dimensions:	Rozměry:
@@ -1783,6 +1803,7 @@
 	Convert Point Tool	Nástroj převést bod
 	Photo	Fotografie
 	Photoshop by Tonynehihi website	Web Photoshop by Tonynehihi
+	PhotoCraft website	Web PhotoCraft
 	Picas	Pica
 	Pillow Emboss	Polštářový reliéf
 	Pixel Replacement	Nahrazení pixelů
@@ -2007,6 +2028,7 @@
 	Quick export format	Formát rychlého exportu
 	Quick export location	Umístění rychlého exportu
 	Recent file count	Počet nedávných souborů
+	LUT folder	Složka LUT
 	Recent files	Nedávné soubory
 	Recent fonts	Nedávná písma
 	Recover on launch	Obnovit při spuštění
@@ -2122,6 +2144,7 @@
 	More panels	Další panely
 	More documents	Další dokumenty
 	These settings aren't available in Photoshop by Tonynehihi yet.	Tato nastavení zatím v aplikaci Photoshop by Tonynehihi nejsou k dispozici.
+	These settings aren't available in PhotoCraft yet.	Tato nastavení zatím v aplikaci PhotoCraft nejsou k dispozici.
 	Graphics	Grafika
 	Reset GPU Backend	Obnovit grafický backend
 	Applies at next launch.	Projeví se při příštím spuštění.
@@ -2251,7 +2274,10 @@
 	Switched to CPU rendering	Přepnuto na vykreslování CPU
 	GPU acceleration could not continue. Your documents are unchanged.	Akcelerace GPU nemohla pokračovat. Dokumenty zůstaly nezměněny.
 	Photoshop by Tonynehihi is using the CPU image compositor. The window may still use your graphics adapter.	Photoshop by Tonynehihi skládá obraz pomocí CPU. Okno může nadále používat grafický adaptér.
+	PhotoCraft is using the CPU image compositor. The window may still use your graphics adapter.	PhotoCraft skládá obraz pomocí CPU. Okno může nadále používat grafický adaptér.
 	Retry GPU requires a restart. Save your work first.	Opakování GPU vyžaduje restart. Nejprve uložte práci.
+	Retry GPU tries the graphics processor again now.	Opakování GPU zkusí grafický procesor znovu hned teď.
+	GPU acceleration resumed.	Akcelerace GPU obnovena.
 	Keep Using CPU	Pokračovat s CPU
 	Retry GPU	Zkusit GPU znovu
 	Advanced	Pokročilé
@@ -2311,6 +2337,11 @@ cameraRaw	Color	Barvy
 	Content-Aware Move Tool	Nástroj přesun s ohledem na obsah
 	TIFF Options	Možnosti TIFF
 	Targa Options	Možnosti Targa
+	JPEG Options	Možnosti JPEG
+	Image Options	Možnosti obrazu
+	Format Options	Možnosti formátu
+	Baseline ("Standard")	Základní („Standardní“)
+	Baseline Optimized	Základní optimalizovaný
 	24 bits/pixel	24 bitů/pixel
 	32 bits/pixel	32 bitů/pixel
 	Including layers will increase file size.	Zahrnutí vrstev zvětší velikost souboru.
@@ -2374,11 +2405,11 @@ cameraRaw	Color	Barvy
 	Apply At Canvas Bounds	Použít efekt na hranicích plátna
 
 # Shared screen eyedropper and text Color Picker (#1128).
-	Color Picker (Text Color)	Výběr barvy (Barva textu)
+	Color Picker (Text Color)	Výběr barvy (barva textu)
 	Color Picker ({name})	Výběr barvy ({name})
-	Color Picker (Fill Color)	Výběr barvy (Barva výplně)
+	Color Picker (Fill Color)	Výběr barvy (barva výplně)
 	Fill color	Barva výplně
-	Color Picker (Stroke Color)	Výběr barvy (Barva tahu)
+	Color Picker (Stroke Color)	Výběr barvy (barva tahu)
 	Stroke color	Barva tahu
 	Pick screen color	Vybrat barvu obrazovky
 	Sample a pixel anywhere on the screen	Vzorkovat pixel kdekoli na obrazovce
@@ -2493,6 +2524,7 @@ fontWeight	Italic	Kurzíva
 	Transparency Threshold	Práh průhlednosti
 	Opacity Threshold	Práh krytí
 	Photoshop by Tonynehihi — Screen Color Picker	Photoshop by Tonynehihi — Výběr barvy obrazovky
+	PhotoCraft — Screen Color Picker	PhotoCraft — Výběr barvy obrazovky
 
 	Rasterize svg groups deeper than	Rasterizovat skupiny SVG hlubší než tato úroveň
 	0 turns this threshold off; SVG groups nested deeper than 100 levels are always rasterized.	0 vypne tento práh; skupiny SVG vnořené hlouběji než 100 úrovní se rastrují vždy.
@@ -2530,7 +2562,7 @@ fontWeight	Italic	Kurzíva
 	Match Canvas	Podle plátna
 	Auto Adjust Opacity	Automaticky upravit krytí
 	Crop Shield color	Barva stínění oříznutí
-	Color Picker (Crop Shield Color)	Výběr barvy (Barva stínění oříznutí)
+	Color Picker (Crop Shield Color)	Výběr barvy (barva stínění oříznutí)
 	From Center	Ze středu
 	Link radii	Propojit poloměry
 	Star Ratio:	Poměr hvězdy:
@@ -2647,7 +2679,7 @@ cameraData	Lens	Objektiv
 	Search settings…	Hledat nastavení…
 	No matching settings	Žádná odpovídající nastavení
 # Edit › Content-Aware Fill workspace
-	Sampling Brush Tool	Nástroj Štětec vzorkování
+	Sampling Brush Tool	Nástroj štětec vzorkování
 	Sampling Area Overlay	Překrytí oblasti vzorkování
 	Show Sampling Area	Zobrazit oblast vzorkování
 	Indicates	Označuje
@@ -2666,6 +2698,36 @@ cameraData	Lens	Objektiv
 	Output To	Výstup do
 	Duplicate Layer	Duplikovat vrstvu
 	Contract	Zúžit
+
+	Animation Options	Možnosti animace
+	Entire Document	Celý dokument
+	Filter Options	Možnosti filtrování
+	Layer Bounds	Hranice vrstvy
+	Layers Panel Options	Možnosti panelu Vrstvy
+	Lock Layers	Zamknout vrstvy
+	New Artboard…	Nové kreslicí plátno…
+	New Group	Nová skupina
+	New Group…	Nová skupina…
+	New Layer…	Nová vrstva…
+	Panel Options…	Možnosti panelu…
+	Prevent Auto-Nesting	Zabránit automatickému vnoření
+	Show Layers	Zobrazit vrstvy
+	Thumbnail Contents	Obsah miniatur
+	Thumbnail Size	Velikost miniatur
+	Use Default Masks on Fill Layers	Používat výchozí masky u vrstev výplně
+	Expand New Effects	Rozbalovat nové efekty
+	Add “copy” to Copied Layers and Groups	Přidávat „kopie“ ke kopírovaným vrstvám a skupinám
+	Preview on canvas when reordering layers	Zobrazovat náhled na plátně při změně pořadí vrstev
+	Show layer mask badges	Zobrazovat odznaky masek vrstev
+
+# Smart Filter editors
+	Blending Options ({filter})	Volby prolnutí ({filter})
+	Hide the layer's effects and Smart Filters  ({key}-click: all layers)	Skrýt efekty vrstvy a inteligentní filtry  (kliknutí s {key}: všechny vrstvy)
+	Show the layer's effects and Smart Filters  ({key}-click: all layers)	Zobrazit efekty vrstvy a inteligentní filtry  (kliknutí s {key}: všechny vrstvy)
+	Wait for the current job to finish.	Počkejte na dokončení aktuální úlohy.
+	The document or Smart Filter changed. Reopen its dialog.	Dokument nebo inteligentní filtr se změnil. Znovu otevřete jeho dialog.
+	Opacity must be between 0% and 100%.	Krytí musí být mezi 0% a 100%.
+	Dissolve is approximated: it blends without Photoshop's dither.	Režim Rozpustit je pouze aproximován: prolíná bez ditheringu Photoshopu.
 
 # Dynamic labels the tl! literal scanner cannot see: filter and Filter Gallery parameter names and
 # choices (humanized from their keys), Camera Raw controls, render filters (Flame, Picture Frame, Tree),
@@ -2815,6 +2877,9 @@ cameraData	Lens	Objektiv
 	Cooling80	Ochlazovací 80
 	Cooling82	Ochlazovací 82
 	Copyright Status	Stav autorských práv
+	Copyright Info URL	URL informace o autorských právech
+	Copyright Notice	Oznámení autorských práv
+	Document Title	Název dokumentu
 	Copyrighted	Chráněno autorským právem
 	Correct C A	Korigovat chromatickou aberaci
 	Correct Distortion	Korigovat zkreslení
@@ -2884,6 +2949,7 @@ cameraData	Lens	Objektiv
 	Duplicate Layer Comp	Duplikovat kompozici vrstev
 	Duplicate Layers	Duplikovat vrstvy
 	Duplicate Path	Duplikovat cestu
+	Rename Path…	Přejmenovat cestu…
 	Duplication	Duplikace
 	Duration	Doba trvání
 	Dust & Scratches	Prach a škrábance
@@ -3088,7 +3154,6 @@ cameraData	Lens	Objektiv
 	Liquify	Zkapalnit
 	List	Seznam
 	Load Selection	Načíst výběr
-	Lock Layers	Zamknout vrstvy
 	Locked	Zamčeno
 	Long Lines	Dlouhé čáry
 	Long Strokes	Dlouhé tahy
@@ -3136,11 +3201,9 @@ cameraData	Lens	Objektiv
 	Neon Glow	Neonová záře
 	Neutralize	Neutralizovat
 	New Channel	Nový kanál
-	New Group	Nová skupina
 	New Guide	Nové vodítko
 	New Guide Layout	Nové rozvržení vodítek
 	New Layer Comp	Nová kompozice vrstev
-	New Layer…	Nová vrstva…
 	New Video Layer from File	Nová video vrstva ze souboru
 	New document	Nový dokument
 	New document…     ⌘N	Nový dokument…     ⌘N
@@ -3230,6 +3293,7 @@ cameraData	Lens	Objektiv
 	Quick Selection	Rychlý výběr
 	Quit	Ukončit
 	Quit Photoshop by Tonynehihi	Ukončit Photoshop by Tonynehihi
+	Quit PhotoCraft	Ukončit PhotoCraft
 	Quit {app}	Ukončit {app}
 	RGB	RGB
 	Radial Blur	Radiální rozostření
@@ -3644,8 +3708,10 @@ curves	Smooth	Vyhladit
 @plural	{warning} (+{n} more brush preset warning)|{warning} (+{n} more brush preset warnings)	{warning} (+{n} další upozornění k přednastavení štětců)|{warning} (+{n} další upozornění k přednastavení štětců)|{warning} (+{n} dalších upozornění k přednastavení štětců)
 	Preferences can't be saved	Předvolby nelze uložit
 	Photoshop by Tonynehihi keeps retrying; until a save succeeds, preference changes are lost when it closes.	Photoshop by Tonynehihi se nadále pokouší o uložení; dokud nebude úspěšné, změny předvoleb se při zavření ztratí.
+	PhotoCraft keeps retrying; until a save succeeds, preference changes are lost when it closes.	PhotoCraft se nadále pokouší o uložení; dokud nebude úspěšné, změny předvoleb se při zavření ztratí.
 	GPU retry scheduled	Naplánován další pokus o použití GPU
 	Save your work and restart Photoshop by Tonynehihi to retry GPU acceleration. CPU rendering remains active for this session.	Chcete-li znovu zkusit akceleraci GPU, uložte práci a restartujte Photoshop by Tonynehihi. V této relaci zůstane aktivní vykreslování pomocí CPU.
+	Save your work and restart PhotoCraft to retry GPU acceleration. CPU rendering remains active for this session.	Chcete-li znovu zkusit akceleraci GPU, uložte práci a restartujte PhotoCraft. V této relaci zůstane aktivní vykreslování pomocí CPU.
 	GPU device was lost; using the CPU renderer.	Spojení se zařízením GPU bylo ztraceno; používá se vykreslování pomocí CPU.
 	GPU error; using the CPU renderer.	Chyba GPU; používá se vykreslování pomocí CPU.
 @plural	{what} with {n} warning|{what} with {n} warnings	{what} ({n} upozornění)|{what} ({n} upozornění)|{what} ({n} upozornění)
@@ -3747,9 +3813,16 @@ navigator	Zoom	Zvětšení
 	Medium Blue	Středně modrá
 	Object Finder	Hledání objektů
 	No object found there — drag a rectangle around it	Nebyl tam nalezen žádný objekt — přetáhněte kolem něj obdélník
+	The active layer has no pixels here — turn on Sample All Layers or select a layer with pixels	Aktivní vrstva tu nemá žádné pixely — zapněte Vzorkovat všechny vrstvy nebo vyberte vrstvu s pixely
 	Remove after each stroke	Odstranit po každém tahu
 	Apply the removal ({key})	Použít odstranění ({key})
 	Strokes to remove: {n} (Enter applies, Esc cancels)	Tahy k odstranění: {n} (Enter použije, Esc zruší)
+	Load Contours…	Načíst obrysy…
+	Replace Contours…	Nahradit obrysy…
+	Save Contours…	Uložit obrysy…
+	Delete Contour	Smazat obrys
+	Loaded contours from {file}	Obrysy načteny ze souboru {file}
+	Saved contours to {file}	Obrysy uloženy do souboru {file}
 	Show home recent files	Zobrazit nedávné soubory na úvodní obrazovce
 	Clear Brush Controls	Obnovit ovládací prvky stopy
 	Reset All Locked Settings	Obnovit všechna zamknutá nastavení
@@ -3758,10 +3831,14 @@ navigator	Zoom	Zvětšení
 # Actions panel: Load/Save Actions (.atn) and kept Photoshop steps
 	Load Actions…	Načíst akce…
 	Save Actions…	Uložit akce…
+	New Action…	Nová akce…
+	Start Recording	Zahájit nahrávání
+	Stop Recording	Zastavit nahrávání
 	{name} (Photoshop)	{name} (Photoshop)
 	{message} ({note})	{message} ({note})
 @plural	Loaded {n} action from {file}|Loaded {n} actions from {file}	Načtena {n} akce ze souboru {file}|Načteny {n} akce ze souboru {file}|Načteno {n} akcí ze souboru {file}
 @plural	{n} step has no Photoshop by Tonynehihi equivalent yet|{n} steps have no Photoshop by Tonynehihi equivalent yet	{n} krok zatím nemá v Photoshop by Tonynehihiu obdobu|{n} kroky zatím nemají v Photoshop by Tonynehihiu obdobu|{n} kroků zatím nemá v Photoshop by Tonynehihiu obdobu
+@plural	{n} step has no PhotoCraft equivalent yet|{n} steps have no PhotoCraft equivalent yet	{n} krok zatím nemá v PhotoCraftu obdobu|{n} kroky zatím nemají v PhotoCraftu obdobu|{n} kroků zatím nemá v PhotoCraftu obdobu
 @plural	Saved {n} action to {file}|Saved {n} actions to {file}	Uložena {n} akce do souboru {file}|Uloženy {n} akce do souboru {file}|Uloženo {n} akcí do souboru {file}
 @plural	{n} step with no Photoshop equivalent left out|{n} steps with no Photoshop equivalent left out	Vynechán {n} krok bez obdoby v Photoshopu|Vynechány {n} kroky bez obdoby v Photoshopu|Vynecháno {n} kroků bez obdoby v Photoshopu
 
@@ -3792,11 +3869,18 @@ navigator	Zoom	Zvětšení
 # History panel › History Brush source (#2966)
 	Paints from the History panel's source state	Maluje ze zdrojového stavu panelu Historie
 	Sets the source for the history brush	Nastaví zdroj pro štětec historie
+# Bevel & Emboss shading controls.
+	Highlight Mode	Režim světel
+	Highlight Color	Barva světel
+	Highlight Opacity	Krytí světel
+	Shadow Mode	Režim stínů
+	Shadow Color	Barva stínů
+	Shadow Opacity	Krytí stínů
 # Embedded Profile Mismatch: profile names beside the choices, Remember this choice
 	Use the embedded profile ({profile})	Použít vložený profil ({profile})
 	Convert to the working space ({profile})	Převést do pracovního prostoru barev ({profile})
 	Remember this choice for future images	Zapamatovat si tuto volbu pro další obrázky
-	Turn the prompt back on with Ask On Mismatch in Edit › Color Settings.	Dotaz znovu zapnete volbou Ask On Mismatch v nabídce Úpravy › Nastavení barev.
+	Turn the prompt back on with Ask On Mismatch in Edit › Color Settings.	Dotaz znovu zapnete volbou „Ptát se při nesouladu profilů“ v nabídce Úpravy › Nastavení barev.
 	Button Mode	Režim tlačítka
 	Button Mode On	Režim tlačítka zapnutý
 
@@ -3808,6 +3892,7 @@ navigator	Zoom	Zvětšení
 	Chisel Hard	Tvrdé tesání
 	Chisel Soft	Měkké tesání
 	Open color-less EXR as ACEScg	Otevřít EXR bez údaje o barevném prostoru jako ACEScg
+	Do not append "copy" to filename when saving a copy	Nepřidávat „copy“ k názvu souboru při ukládání kopie
 
 # View › Guides › right-click a guide
 	Edit Selected Guides	Upravit vybraná vodítka
@@ -3819,6 +3904,9 @@ navigator	Zoom	Zvětšení
 	Photoshop by Tonynehihi can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Photoshop by Tonynehihi v této relaci nemá přístup k systémové schránce. Na Waylandu sandbox Flatpaku skrývá protokol, přes který se čtou obrázky z jiných aplikací.
 	To paste from other apps, start Photoshop by Tonynehihi under XWayland: `{command}`	Chcete-li vkládat z jiných aplikací, spusťte Photoshop by Tonynehihi pod XWaylandem: `{command}`
 	Nothing to paste: Photoshop by Tonynehihi can't read the system clipboard here	Není co vložit: Photoshop by Tonynehihi zde nemůže číst systémovou schránku
+	PhotoCraft can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	PhotoCraft v této relaci nemá přístup k systémové schránce. Na Waylandu sandbox Flatpaku skrývá protokol, přes který se čtou obrázky z jiných aplikací.
+	To paste from other apps, start PhotoCraft under XWayland: `{command}`	Chcete-li vkládat z jiných aplikací, spusťte PhotoCraft pod XWaylandem: `{command}`
+	Nothing to paste: PhotoCraft can't read the system clipboard here	Není co vložit: PhotoCraft zde nemůže číst systémovou schránku
 	Delete this set	Smazat tuto sadu
 	New Set…	Nová sada…
 	PhotoCraft Defaults	Výchozí Photoshop by Tonynehihi
@@ -3854,6 +3942,7 @@ navigator	Zoom	Zvětšení
 	{shortcut} is reserved by the system and can't be assigned.	{shortcut} je vyhrazena systémem a nelze ji přiřadit.
 	Low-Latency Drawing (vsync off, applies at next launch)	Kreslení s nízkou latencí (bez vertikální synchronizace, platí po dalším spuštění)
 # Free Transform: a new layer while the box is open (#5859)
+	Reference point location	Umístění referenčního bodu
 	Free Transform is still being applied; try again when it has finished.	Volná transformace se stále použije; zkuste to znovu, až skončí.
 	The transform couldn't be applied.	Transformaci nelze použít.
 # Preferences › Performance › GPU Memory; the status bar and slow-redraw notice
@@ -3862,15 +3951,165 @@ navigator	Zoom	Zvětšení
 	GPU Memory Full	Paměť GPU je plná
 	The layers need {needed} of GPU memory and may hold {budget}, so edits that redraw the whole document do it on the CPU. Click to set GPU Memory.	Vrstvy potřebují {needed} paměti GPU a mohou zabrat {budget}, takže úpravy, které překreslují celý dokument, to dělají na CPU. Kliknutím nastavíte Paměť GPU.
 	GPU memory budget: {budget}	Rozpočet paměti GPU: {budget}
+	Graphics memory: {size}	Paměť GPU: {size}
 	This document's layers: {needed} of {budget} for layers	Vrstvy tohoto dokumentu: {needed} z {budget} pro vrstvy
 	This document's layers need {needed} but may hold {budget}: whole-document redraws use the CPU	Vrstvy tohoto dokumentu potřebují {needed}, ale mohou zabrat {budget}: překreslení celého dokumentu probíhá na CPU
 	GPU Memory (MB, 0 = Automatic)	Paměť GPU (MB, 0 = Automaticky)
+	{path}: the path is not valid Unicode; save under another name.	{path}: cesta není platný Unicode; uložte soubor pod jiným názvem.
 	{name} was changed by another app after it was opened or saved here.	Soubor {name} změnila jiná aplikace poté, co byl zde otevřen nebo uložen.
 	Replace it with this document, or cancel and use File › Save As to keep both.	Nahraďte ho tímto dokumentem, nebo zrušte a použijte Soubor › Uložit jako, abyste zachovali obojí.
 	Decrease Brush Size	Zmenšit velikost štětce
 	Increase Brush Size	Zvětšit velikost štětce
 	Decrease Brush Hardness	Snížit tvrdost štětce
 	Increase Brush Hardness	Zvýšit tvrdost štětce
+	Demosaic	Demozaikování
+	How the camera's colour filter mosaic is filled in. It is applied when the file opens; the preview shows the method it was opened with.	Jak se doplňuje mozaika barevného filtru fotoaparátu. Použije se při otevření souboru; náhled ukazuje metodu, se kterou byl otevřen.
+	AHD (adaptive homogeneity)	AHD (adaptivní homogenita)
+	Malvar–He–Cutler	Malvar–He–Cutler
+	Hirakawa–Parks: the cleanest edges and the least colour fringing, the slowest.	Hirakawa–Parks: nejčistší hrany a nejméně barevných lemů, nejpomalejší.
+	Gradient-corrected interpolation: sharp and fast, with some colour fringing on fine detail.	Interpolace s korekcí gradientu: ostrá a rychlá, s mírnými barevnými lemy v jemných detailech.
+	The fastest and the softest, with colour fringing on fine detail.	Nejrychlejší a nejměkčí, s barevnými lemy v jemných detailech.
+	“{name}” already exists. Replace it?	„{name}“ již existuje. Nahradit?
+	The name in the save dialog was “{name}”.	Název v dialogu ukládání byl „{name}“.
+
+# Labels the UI looks up through a variable (tool, glyph-group, Liquify and warp names, command
+# parameters and choices humanized from their keys, history steps and contextual
+# Camera Raw / layer labels) that other catalogs already covered. Translated the same way as
+# above, from the plain meaning of the English label.
+	Export As: {name}	Exportovat jako: {name}
+	Tool	Nástroj
+	Arc Lower	Oblouk dole
+	Arc Upper	Oblouk nahoře
+	Arrows	Šipky
+	Basic Latin	Základní latinka
+	Bloat	Nafouknout
+	Burn	Ztmavení
+	Checkerboard	Šachovnice
+	Clone Stamp	Klonovací razítko
+	Color Sampler Tool	Nástroj vzorkovač barev
+	Currency	Měnové symboly
+	Cyrillic	Cyrilice
+	Decrease Type Size	Zmenšit velikost písma
+	Decrease Type Size by 10	Zmenšit velikost písma o 10
+	Delete Snapshot	Odstranit snímek
+	Detect Faces	Rozpoznat obličeje
+	Dodge	Zesvětlení
+	Erase with Brush or Pencil (hold)	Mazat štětcem nebo tužkou (při podržení klávesy)
+	Fill with Background Color	Vyplnit barvou pozadí
+	Fill with Background Color, Preserve Transparency	Vyplnit barvou pozadí, zachovat průhlednost
+	Fill with Foreground Color	Vyplnit barvou popředí
+	Fill with Foreground Color, Preserve Transparency	Vyplnit barvou popředí, zachovat průhlednost
+	Forward Warp	Deformovat tažením
+	Freeze Lasso	Laso zmrazení
+	Freeze Mask	Zmrazit oblast
+	Greek	Řecké písmo
+	Hand Tool (hold)	Nástroj ruka (při podržení klávesy)
+	History Brush	Štětec historie
+	Increase Type Size	Zvětšit velikost písma
+	Increase Type Size by 10	Zvětšit velikost písma o 10
+	Kerning: Metrics, Optical or a value in 1/1000 em (Alt+←/→ at the caret)	Kerning: zvolte „Metrické“, „Optické“ nebo hodnotu v 1/1000 em (Alt+←/→ v místě textového kurzoru)
+	Latin 1	Latinka 1
+	Latin Extended-A	Rozšířená latinka A
+	Latin Extended-B	Rozšířená latinka B
+	Lock Transparent Pixels	Zamknout průhledné pixely
+	Make Selection from Path	Vytvořit výběr z cesty
+	Mask None	Zrušit maskování
+	Math Symbols	Matematické symboly
+	New Snapshot	Vytvořit snímek
+	Numbers	Čísla
+	Pattern Fill…	Výplň vzorkem…
+	Pick Color From Image	Vybrat barvu z obrazu
+	Proof Setup…	Nastavení nátisku…
+	Pucker	Stáhnout
+	Push Left	Tlačit doleva
+	Reconstruct All	Rekonstruovat vše
+	Save Path	Uložit cestu
+	Sponge	Houba
+	Target Channel 3	Zacílit na kanál 3
+	Target Channel 4	Zacílit na kanál 4
+	Target Channel 5	Zacílit na kanál 5
+	Target Channel 6	Zacílit na kanál 6
+	Target Channel 7	Zacílit na kanál 7
+	Target Channel 8	Zacílit na kanál 8
+	Target Channel 9	Zacílit na kanál 9
+	Target Composite Channel	Zacílit na složený kanál
+	Temporary	Dočasné
+	Thaw Mask	Rozmrazit oblast
+	Toggle Layer Mask Overlay	Přepnout překryv masky vrstvy
+	Twirl Clockwise	Zvířit doprava
+	Twirl Counterclockwise	Zvířit doleva
+	Warming Filter (85)	Oteplovací filtr (85)
+	Zoom In (hold, drag to scrub)	Přiblížit (při podržení klávesy, tažením plynule měníte zvětšení)
+	Zoom Out (hold)	Oddálit (při podržení klávesy)
+	blue	modrá
+	gray	šedá
+	green	zelená
+	none	žádná
+	orange	oranžová
+	red	červená
+	violet	fialová
+	yellow	žlutá
+	Adobe-rgb-compat	Kompatibilní s Adobe RGB (1998)
+	Any	Bez omezení
+	Ask On Mismatch	Ptát se při nesouladu profilů
+	Ask On Missing	Ptát se při chybějícím profilu
+	Ask On Paste	Ptát se při vkládání
+	Author Title	Pracovní pozice autora
+	Based On	Podle
+	Blend Text Gamma	Gama prolnutí textu
+	Case Sensitive	Rozlišovat velikost písmen
+	Ccw	Proti směru hodinových ručiček
+	Change Find	Změnit a najít další
+	Cmyk	CMYK
+	Coated-cmyk	CMYK pro křídový papír
+	Convert	Převést
+	Copyright Url	URL informací o autorských právech
+	Cw	Po směru hodinových ručiček
+	Display-p3	Display P3
+	Dont Enlarge	Nezvětšovat
+	Forward	Vpřed
+	Horizontal Distortion	Vodorovné zkreslení
+	Intent	Záměr převodu
+	Linear-srgb	Lineární sRGB
+	Mask Channel	Kanál masky
+	Monitor Profile	Profil monitoru
+	Nearest	Nejbližší soused
+	Policy Cmyk	Zásady správy barev pro CMYK
+	Policy Gray	Zásady správy barev pro šedou
+	Policy Rgb	Zásady správy barev pro RGB
+	Prophoto-compat	Kompatibilní s ProPhoto
+	R G B	RGB
+	Rec2020	Rec. 2020
+	Sgray	sGray (tónová křivka sRGB)
+	Simulate Paper	Simulovat papír
+	Source Channel	Zdrojový kanál
+	Source Invert	Invertovat zdroj
+	Source1 Channel	Kanál zdroje 1
+	Source1 Invert	Invertovat zdroj 1
+	Source2 Channel	Kanál zdroje 2
+	Source2 Invert	Invertovat zdroj 2
+	Title	Název
+	Vertical Distortion	Svislé zkreslení
+	Whole Word	Celé slovo
+	Working Cmyk	Pracovní CMYK
+	Working Gray	Pracovní šedá
+	Working Rgb	Pracovní RGB
+	Working-cmyk	Pracovní CMYK
+	Warming Filter (LBA)	Oteplovací filtr (LBA)
+	Warming Filter (81)	Oteplovací filtr (81)
+	Cooling Filter (80)	Ochlazovací filtr (80)
+	Cooling Filter (LBB)	Ochlazovací filtr (LBB)
+	Cooling Filter (82)	Ochlazovací filtr (82)
+layers	Fill	Krytí výplně
+layers	Fill:	Krytí výplně:
+cameraRaw	Dehaze	Odstranění oparu
+	Move Up	Přesunout nahoru
+	Move Down	Přesunout dolů
+	Previous Brush	Předchozí štětec
+	Next Brush	Další štětec
+	First Brush	První štětec
+	Last Brush	Poslední štětec
+	Preview size	Preview size
 	Memory Usage	Využití paměti
 	Per-document RAM limit (MB)	Limit RAM na dokument (MB)
 	Installed RAM: {ram} MB; this limit: {percent}%	Nainstalovaná RAM: {ram} MB; tento limit: {percent}%
@@ -3885,9 +4124,12 @@ navigator	Zoom	Zvětšení
 	DDS Options	Možnosti DDS
 	Generate Mipmaps	Generovat mipmapy
 
+# Color Table (.act) dialog
+	There is no color table to save.	Neexistuje žádná tabulka barev k uložení.
+@plural	Saved {n} color to {file}|Saved {n} colors to {file}	Uložena {n} barva do {file}|Uloženy {n} barvy do {file}|Uloženo {n} barev do {file}
+
 # Graphics Adapter preference (#1885)
 	GPU adapter	Adaptér GPU
-
 # Photoshop by Tonynehihi fork strings (self-update)
 	Convert document's colors to the working space	Převést barvy dokumentu do pracovního prostoru barev
 	Use the embedded profile (instead of the working space)	Použít vložený profil (místo pracovního prostoru barev)
@@ -3897,3 +4139,22 @@ navigator	Zoom	Zvětšení
 	Check for Updates	Zkontrolovat aktualizace
 	Photoshop by Tonynehihi — by Tonynehihi.	Photoshop by Tonynehihi — by Tonynehihi.
 	by Tonynehihi	by Tonynehihi
+# Actions: a step dialog holds a suspended recording (#7365)
+	Confirm or cancel the open action step dialog first	Nejprve potvrďte nebo zrušte otevřený dialog kroku akce
+	Pro Medium Gray	Pro (středně šedý)
+	Solarized	Solarized
+	Breeze	Breeze
+	Pro Light Gray	Pro (světle šedý)
+	Pro Light	Pro (světlý)
+	Resize Windows to Fit	Přizpůsobit velikost oken
+
+	EXR	EXR
+
+# Paragraph direction (TYPE-218-2)
+	Automatic paragraph direction	Automatický směr odstavce
+	Left-to-right paragraph direction	Směr odstavce zleva doprava
+	Right-to-left paragraph direction	Směr odstavce zprava doleva
+	Not rendered: this adjustment ({key}) is kept as imported.	Nevykresleno: tato úprava ({key}) je ponechána tak, jak byla importována.
+
+# Print preview image (#8236)
+	Print preview image	Print preview image
