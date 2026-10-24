@@ -3,6 +3,19 @@
 Personal build of PhotoCraft for Tony. Versions follow semver: patch = small
 fixes, minor = a batch of features, major = breaking changes.
 
+## 1.3.1 — 2026-10-24
+
+**SYNCS UPSTREAM PHOTOCRAFT v0.15.1** into Photoshop by Tonynehihi, keeping the personal-build changes from 1.3.0: no upstream Discord / website / GitHub links anywhere in the UI, the Adobe-style PsT icon (including the Dock icon fix), and the in-app updater pointed at this repo.
+
+- **MAJOR SECURITY HARDENING WAVE** — hostile geometry and raster work, JPEG/WebP/PSD/ICC parsing, plugin host routing, brush work, and document working sets are now bounded and charged against budgets, so crafted files cannot exhaust memory or stall the app.
+- **SELECT AND MASK EDITS NOW FLOW THROUGH refineEdge PARAMS** — Brush, Lasso and Refine Edge Brush paint tile by tile, and a refine too large to allocate is refused up front instead of failing mid-edit.
+- **SAFER STORED PATHS AND LINKED FILES** — Windows drive and share paths are refused outside Windows, and linked files resolve through absolute paths.
+- **MACOS PACKAGING RETRY** — DMG stapling retries when Apple's ticket lookup drops, so releases are less likely to fail at the last step.
+- PSD pattern budget charges now survive parse failures, ICC profile identity is confirmed by bytes (not just a hash), duplicate EXIF text is no longer copied repeatedly, and the droplet shim runs with restricted permissions.
+- Many smaller fixes across paths, text, paint and the UI.
+
+— tonynehihi
+
 ## 1.3.0 — 2026-10-23
 
 **SYNCS UPSTREAM PHOTOCRAFT v0.14.0** (through v0.13.0) into Photoshop by Tonynehihi, keeping the personal-build changes from 1.2.0: no upstream Discord / website / GitHub links anywhere in the UI, the Adobe-style PsT icon, and the in-app updater pointed at this repo.

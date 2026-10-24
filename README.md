@@ -35,7 +35,7 @@ packaging/macos/package.sh --arch aarch64
 
 The DMG lands in `dist/release/`. Full instructions (clean install, removing the old build, Gatekeeper troubleshooting) are in `packaging/macos/HUONG-DAN.md` (in Vietnamese).
 
-Version **1.3.0** is the current release. Already on an earlier release? It arrives by itself through **Check for Updates** — every release since 1.1.0 updates in-app.
+Version **1.3.1** is the current release. Already on an earlier release? It arrives by itself through **Check for Updates** — every release since 1.1.0 updates in-app.
 
 ## Tools
 
