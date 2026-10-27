@@ -1,12 +1,19 @@
 # Photoshop by Tonynehihi — Hướng dẫn cài đặt & sử dụng
 
-Bản build cá nhân của Tony, dựa trên PhotoCraft v0.15.1 (MIT/Apache-2.0) — bản clone Photoshop bằng Rust, chạy offline, không cần Adobe.
+Bản build cá nhân của Tony, dựa trên PhotoCraft v0.16.0 (MIT/Apache-2.0) — bản clone Photoshop bằng Rust, chạy offline, không cần Adobe.
 
 Đã rebrand:
 - Tên app **"Photoshop by Tonynehihi"**, icon **PsT** phong cách Adobe (nền xanh dương)
 - Menu bar macOS: About / Hide / Quit đều hiện "Photoshop by Tonynehihi"
 - About dialog gọn: "Photoshop by Tonynehihi — by Tonynehihi" + version
 - Đã gỡ hết link Discord / website / GitHub của upstream khỏi menu Help
+
+## Có gì mới ở bản 1.4.0
+
+- **Đồng bộ PhotoCraft v0.16.0**: Adaptive Wide Angle modal workspace, engine craft-jpeg mới (JPEG 12-bit và progressive), CLI có man page và shell completions.
+- **Giữ nguyên lớp fork từ 1.3.1**: icon PsT phong cách Adobe (kể cả fix icon Dock), updater tự động trong app trỏ về repo này, menu Help nội bộ (không link upstream).
+
+**Lưu ý:** đang dùng bản 1.3.1 thì khỏi build lại — mở app, Help → Check for Updates là tự lên 1.4.0. Hướng dẫn build dưới đây chỉ dành cho cài mới từ source.
 
 ## Có gì mới ở bản 1.3.1
 
@@ -56,7 +63,7 @@ Xong thì **đóng Terminal, mở lại**.
 
 ## Build & chạy
 
-**Bước 3** — Giải nén `pst-by-tonynehihi-1.3.1.zip`.
+**Bước 3** — Giải nén `pst-by-tonynehihi-1.4.0.zip`.
 
 **Bước 4** — Trong Terminal:
 ```bash

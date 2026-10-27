@@ -3,6 +3,18 @@
 Personal build of PhotoCraft for Tony. Versions follow semver: patch = small
 fixes, minor = a batch of features, major = breaking changes.
 
+## 1.4.0 — 2026-10-27
+
+**SYNCS UPSTREAM PHOTOCRAFT v0.16.0** into Photoshop by Tonynehihi, keeping the personal-build changes from 1.3.1: no upstream Discord / website / GitHub links anywhere in the UI, the Adobe-style PsT icon (including the Dock icon fix), and the in-app updater pointed at this repo.
+
+- **ADAPTIVE WIDE ANGLE MODAL WORKSPACE** — a new dedicated workspace for wide-angle correction.
+- **NEW CRAFT-JPEG ENGINE** — 12-bit and progressive JPEG support.
+- **CLI MAN PAGES AND SHELL COMPLETIONS** — the command-line tool now ships manual pages and completions.
+- Update checks remain pointed at this repo (upstream's new release tick is not run).
+- Many smaller fixes across the app from the upstream wave.
+
+— tonynehihi
+
 ## 1.3.1 — 2026-10-24
 
 **SYNCS UPSTREAM PHOTOCRAFT v0.15.1** into Photoshop by Tonynehihi, keeping the personal-build changes from 1.3.0: no upstream Discord / website / GitHub links anywhere in the UI, the Adobe-style PsT icon (including the Dock icon fix), and the in-app updater pointed at this repo.
